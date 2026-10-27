@@ -22,7 +22,7 @@ Open <http://localhost:8000/>. No build step or JavaScript dependencies are requ
 - `assets/fonts/`: Dancing Script and Noto Sans with their SIL Open Font Licenses.
 - `.nojekyll`: disables Jekyll processing on GitHub Pages.
 
-The cover displays animated filmstrips made from the supplied real screenshots in `assets/video/`, corresponding to the paper's A.9 study cases. The frames are optimized WebP assets in `assets/cover/`; originals remain unchanged. No image-generation API is used. Visitors can pause the motion; reduced-motion preferences disable it, and animation pauses when the cover is offscreen.
+The cover displays animated filmstrips made from all 92 supplied real screenshots in `assets/video/`, corresponding to the paper's A.9 study cases. The frames are optimized WebP assets in `assets/cover/`; originals remain unchanged. `assets/cover/manifest.json` records every original-to-cover mapping. All three filmstrips are visible on both desktop and mobile. No image-generation API is used. Visitors can pause the motion; reduced-motion preferences disable it, and animation pauses when the cover is offscreen.
 
 The supplied `assets/icon.png` remains as source material; the page uses a text wordmark and the simple letter favicon. To rebuild cover frames after changing source materials, install Pillow and run `python3 scripts/build_cover_assets.py`.
 

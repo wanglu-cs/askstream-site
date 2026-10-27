@@ -1,0 +1,370 @@
+[
+  {
+    "source": "assets/video/EgoExo/cam01_initial_0-161_frame01.jpg",
+    "cover": "assets/cover/EgoExo-cam01_initial_0-161_frame01.webp"
+  },
+  {
+    "source": "assets/video/FPV/answer_frame01.jpg",
+    "cover": "assets/cover/FPV-answer_frame01.webp"
+  },
+  {
+    "source": "assets/video/MCVI/correct_entity_asking_frame01.jpg",
+    "cover": "assets/cover/MCVI-correct_entity_asking_frame01.webp"
+  },
+  {
+    "source": "assets/video/PEARL/asking_frame01.jpg",
+    "cover": "assets/cover/PEARL-asking_frame01.webp"
+  },
+  {
+    "source": "assets/video/QU/answering_frame01.png",
+    "cover": "assets/cover/QU-answering_frame01.webp"
+  },
+  {
+    "source": "assets/video/blender/case_006_0s.jpg",
+    "cover": "assets/cover/blender-case_006_0s.webp"
+  },
+  {
+    "source": "assets/video/preference_miss/3d060936-d56e-41f2-a753-a335cdc293c0.jpg",
+    "cover": "assets/cover/preference_miss-3d060936-d56e-41f2-a753-a335cdc293c0.webp"
+  },
+  {
+    "source": "assets/video/preference_pass/01d0e941-4109-4f75-9656-8d47d64569e7.jpg",
+    "cover": "assets/cover/preference_pass-01d0e941-4109-4f75-9656-8d47d64569e7.webp"
+  },
+  {
+    "source": "assets/video/EgoExo/cam01_initial_0-161_frame02.jpg",
+    "cover": "assets/cover/EgoExo-cam01_initial_0-161_frame02.webp"
+  },
+  {
+    "source": "assets/video/FPV/answer_frame02.jpg",
+    "cover": "assets/cover/FPV-answer_frame02.webp"
+  },
+  {
+    "source": "assets/video/MCVI/correct_entity_asking_frame02.jpg",
+    "cover": "assets/cover/MCVI-correct_entity_asking_frame02.webp"
+  },
+  {
+    "source": "assets/video/PEARL/asking_frame02.jpg",
+    "cover": "assets/cover/PEARL-asking_frame02.webp"
+  },
+  {
+    "source": "assets/video/QU/answering_frame02.png",
+    "cover": "assets/cover/QU-answering_frame02.webp"
+  },
+  {
+    "source": "assets/video/blender/case_006_125s.jpg",
+    "cover": "assets/cover/blender-case_006_125s.webp"
+  },
+  {
+    "source": "assets/video/preference_miss/43b0ccc7-d9f1-4b4d-a62a-d22fe2c53144.jpg",
+    "cover": "assets/cover/preference_miss-43b0ccc7-d9f1-4b4d-a62a-d22fe2c53144.webp"
+  },
+  {
+    "source": "assets/video/preference_pass/04eeafb0-75aa-4434-912a-c205b7e4916e.jpg",
+    "cover": "assets/cover/preference_pass-04eeafb0-75aa-4434-912a-c205b7e4916e.webp"
+  },
+  {
+    "source": "assets/video/EgoExo/cam01_initial_0-161_frame03.jpg",
+    "cover": "assets/cover/EgoExo-cam01_initial_0-161_frame03.webp"
+  },
+  {
+    "source": "assets/video/FPV/answer_frame03.jpg",
+    "cover": "assets/cover/FPV-answer_frame03.webp"
+  },
+  {
+    "source": "assets/video/MCVI/correct_entity_asking_frame03.jpg",
+    "cover": "assets/cover/MCVI-correct_entity_asking_frame03.webp"
+  },
+  {
+    "source": "assets/video/PEARL/asking_frame03.jpg",
+    "cover": "assets/cover/PEARL-asking_frame03.webp"
+  },
+  {
+    "source": "assets/video/QU/answering_frame03.png",
+    "cover": "assets/cover/QU-answering_frame03.webp"
+  },
+  {
+    "source": "assets/video/blender/case_006_150s.jpg",
+    "cover": "assets/cover/blender-case_006_150s.webp"
+  },
+  {
+    "source": "assets/video/preference_miss/556eb036-a9a7-4524-a913-17b19b4234e8.jpg",
+    "cover": "assets/cover/preference_miss-556eb036-a9a7-4524-a913-17b19b4234e8.webp"
+  },
+  {
+    "source": "assets/video/preference_pass/92668739-302c-4f6b-8c2a-c13928e1f572.jpg",
+    "cover": "assets/cover/preference_pass-92668739-302c-4f6b-8c2a-c13928e1f572.webp"
+  },
+  {
+    "source": "assets/video/EgoExo/cam01_initial_0-161_frame04.jpg",
+    "cover": "assets/cover/EgoExo-cam01_initial_0-161_frame04.webp"
+  },
+  {
+    "source": "assets/video/FPV/wait_frame01.jpg",
+    "cover": "assets/cover/FPV-wait_frame01.webp"
+  },
+  {
+    "source": "assets/video/MCVI/correct_entity_waiting_frame01.jpg",
+    "cover": "assets/cover/MCVI-correct_entity_waiting_frame01.webp"
+  },
+  {
+    "source": "assets/video/PEARL/evidence_215s_frame01.jpg",
+    "cover": "assets/cover/PEARL-evidence_215s_frame01.webp"
+  },
+  {
+    "source": "assets/video/QU/ask_frame01.png",
+    "cover": "assets/cover/QU-ask_frame01.webp"
+  },
+  {
+    "source": "assets/video/blender/case_006_25s.jpg",
+    "cover": "assets/cover/blender-case_006_25s.webp"
+  },
+  {
+    "source": "assets/video/preference_miss/701457b1-8fd6-4051-8b86-f18dda3cb0ca.jpg",
+    "cover": "assets/cover/preference_miss-701457b1-8fd6-4051-8b86-f18dda3cb0ca.webp"
+  },
+  {
+    "source": "assets/video/preference_pass/answering_frame01.png",
+    "cover": "assets/cover/preference_pass-answering_frame01.webp"
+  },
+  {
+    "source": "assets/video/EgoExo/cam01_initial_162-174_frame01.jpg",
+    "cover": "assets/cover/EgoExo-cam01_initial_162-174_frame01.webp"
+  },
+  {
+    "source": "assets/video/FPV/wait_frame02.jpg",
+    "cover": "assets/cover/FPV-wait_frame02.webp"
+  },
+  {
+    "source": "assets/video/MCVI/correct_entity_waiting_frame02.jpg",
+    "cover": "assets/cover/MCVI-correct_entity_waiting_frame02.webp"
+  },
+  {
+    "source": "assets/video/PEARL/waiting_frame01.jpg",
+    "cover": "assets/cover/PEARL-waiting_frame01.webp"
+  },
+  {
+    "source": "assets/video/QU/ask_frame02.png",
+    "cover": "assets/cover/QU-ask_frame02.webp"
+  },
+  {
+    "source": "assets/video/blender/case_006_50s.jpg",
+    "cover": "assets/cover/blender-case_006_50s.webp"
+  },
+  {
+    "source": "assets/video/preference_miss/answering_frame01.jpg",
+    "cover": "assets/cover/preference_miss-answering_frame01.webp"
+  },
+  {
+    "source": "assets/video/preference_pass/answering_frame02.png",
+    "cover": "assets/cover/preference_pass-answering_frame02.webp"
+  },
+  {
+    "source": "assets/video/EgoExo/cam01_initial_162-174_frame02.jpg",
+    "cover": "assets/cover/EgoExo-cam01_initial_162-174_frame02.webp"
+  },
+  {
+    "source": "assets/video/FPV/wait_frame03.jpg",
+    "cover": "assets/cover/FPV-wait_frame03.webp"
+  },
+  {
+    "source": "assets/video/MCVI/correct_entity_waiting_frame03.jpg",
+    "cover": "assets/cover/MCVI-correct_entity_waiting_frame03.webp"
+  },
+  {
+    "source": "assets/video/PEARL/waiting_frame02.jpg",
+    "cover": "assets/cover/PEARL-waiting_frame02.webp"
+  },
+  {
+    "source": "assets/video/QU/ask_frame03.png",
+    "cover": "assets/cover/QU-ask_frame03.webp"
+  },
+  {
+    "source": "assets/video/blender/case_006_75s.jpg",
+    "cover": "assets/cover/blender-case_006_75s.webp"
+  },
+  {
+    "source": "assets/video/preference_miss/answering_frame02.jpg",
+    "cover": "assets/cover/preference_miss-answering_frame02.webp"
+  },
+  {
+    "source": "assets/video/preference_pass/answering_frame03.png",
+    "cover": "assets/cover/preference_pass-answering_frame03.webp"
+  },
+  {
+    "source": "assets/video/EgoExo/cam01_initial_162-174_frame03.jpg",
+    "cover": "assets/cover/EgoExo-cam01_initial_162-174_frame03.webp"
+  },
+  {
+    "source": "assets/video/FPV/wait_frame04.jpg",
+    "cover": "assets/cover/FPV-wait_frame04.webp"
+  },
+  {
+    "source": "assets/video/MCVI/correct_entity_waiting_frame04.jpg",
+    "cover": "assets/cover/MCVI-correct_entity_waiting_frame04.webp"
+  },
+  {
+    "source": "assets/video/PEARL/waiting_frame03.jpg",
+    "cover": "assets/cover/PEARL-waiting_frame03.webp"
+  },
+  {
+    "source": "assets/video/QU/ask_frame04.png",
+    "cover": "assets/cover/QU-ask_frame04.webp"
+  },
+  {
+    "source": "assets/video/blender/case_006_99s.jpg",
+    "cover": "assets/cover/blender-case_006_99s.webp"
+  },
+  {
+    "source": "assets/video/preference_miss/answering_frame03.jpg",
+    "cover": "assets/cover/preference_miss-answering_frame03.webp"
+  },
+  {
+    "source": "assets/video/preference_pass/asking_frame01.png",
+    "cover": "assets/cover/preference_pass-asking_frame01.webp"
+  },
+  {
+    "source": "assets/video/EgoExo/cam02_gold_0-161_frame01.jpg",
+    "cover": "assets/cover/EgoExo-cam02_gold_0-161_frame01.webp"
+  },
+  {
+    "source": "assets/video/MCVI/mask_all_asking_frame01.jpg",
+    "cover": "assets/cover/MCVI-mask_all_asking_frame01.webp"
+  },
+  {
+    "source": "assets/video/PEARL/waiting_frame04.jpg",
+    "cover": "assets/cover/PEARL-waiting_frame04.webp"
+  },
+  {
+    "source": "assets/video/blender/case_006_evidence_frame_01.jpg",
+    "cover": "assets/cover/blender-case_006_evidence_frame_01.webp"
+  },
+  {
+    "source": "assets/video/preference_miss/asking_frame01.jpg",
+    "cover": "assets/cover/preference_miss-asking_frame01.webp"
+  },
+  {
+    "source": "assets/video/preference_pass/asking_frame02.png",
+    "cover": "assets/cover/preference_pass-asking_frame02.webp"
+  },
+  {
+    "source": "assets/video/EgoExo/cam02_gold_0-161_frame02.jpg",
+    "cover": "assets/cover/EgoExo-cam02_gold_0-161_frame02.webp"
+  },
+  {
+    "source": "assets/video/MCVI/mask_all_asking_frame02.jpg",
+    "cover": "assets/cover/MCVI-mask_all_asking_frame02.webp"
+  },
+  {
+    "source": "assets/video/blender/case_006_evidence_frame_02.jpg",
+    "cover": "assets/cover/blender-case_006_evidence_frame_02.webp"
+  },
+  {
+    "source": "assets/video/preference_miss/asking_frame02.jpg",
+    "cover": "assets/cover/preference_miss-asking_frame02.webp"
+  },
+  {
+    "source": "assets/video/preference_pass/asking_frame03.png",
+    "cover": "assets/cover/preference_pass-asking_frame03.webp"
+  },
+  {
+    "source": "assets/video/EgoExo/cam02_gold_0-161_frame03.jpg",
+    "cover": "assets/cover/EgoExo-cam02_gold_0-161_frame03.webp"
+  },
+  {
+    "source": "assets/video/MCVI/mask_all_asking_frame03.jpg",
+    "cover": "assets/cover/MCVI-mask_all_asking_frame03.webp"
+  },
+  {
+    "source": "assets/video/blender/case_006_evidence_frame_03.jpg",
+    "cover": "assets/cover/blender-case_006_evidence_frame_03.webp"
+  },
+  {
+    "source": "assets/video/preference_miss/asking_frame03.jpg",
+    "cover": "assets/cover/preference_miss-asking_frame03.webp"
+  },
+  {
+    "source": "assets/video/preference_pass/asking_frame04.png",
+    "cover": "assets/cover/preference_pass-asking_frame04.webp"
+  },
+  {
+    "source": "assets/video/EgoExo/cam02_gold_0-161_frame04.jpg",
+    "cover": "assets/cover/EgoExo-cam02_gold_0-161_frame04.webp"
+  },
+  {
+    "source": "assets/video/MCVI/mask_all_waiting_frame01.jpg",
+    "cover": "assets/cover/MCVI-mask_all_waiting_frame01.webp"
+  },
+  {
+    "source": "assets/video/blender/case_006_evidence_frame_04.jpg",
+    "cover": "assets/cover/blender-case_006_evidence_frame_04.webp"
+  },
+  {
+    "source": "assets/video/preference_miss/asking_frame04.jpg",
+    "cover": "assets/cover/preference_miss-asking_frame04.webp"
+  },
+  {
+    "source": "assets/video/preference_pass/b08a21e4-dd4e-4b87-b805-cb3e6bb7623f.jpg",
+    "cover": "assets/cover/preference_pass-b08a21e4-dd4e-4b87-b805-cb3e6bb7623f.webp"
+  },
+  {
+    "source": "assets/video/EgoExo/cam02_gold_162-174_frame01.jpg",
+    "cover": "assets/cover/EgoExo-cam02_gold_162-174_frame01.webp"
+  },
+  {
+    "source": "assets/video/MCVI/mask_all_waiting_frame02.jpg",
+    "cover": "assets/cover/MCVI-mask_all_waiting_frame02.webp"
+  },
+  {
+    "source": "assets/video/blender/case_006_evidence_frame_05.jpg",
+    "cover": "assets/cover/blender-case_006_evidence_frame_05.webp"
+  },
+  {
+    "source": "assets/video/preference_miss/b5637b51-7f05-4131-8411-4f7108d24ec8.jpg",
+    "cover": "assets/cover/preference_miss-b5637b51-7f05-4131-8411-4f7108d24ec8.webp"
+  },
+  {
+    "source": "assets/video/preference_pass/ef597f5c-ca03-426e-bd7f-da9987a8d374.jpg",
+    "cover": "assets/cover/preference_pass-ef597f5c-ca03-426e-bd7f-da9987a8d374.webp"
+  },
+  {
+    "source": "assets/video/EgoExo/cam02_gold_162-174_frame02.jpg",
+    "cover": "assets/cover/EgoExo-cam02_gold_162-174_frame02.webp"
+  },
+  {
+    "source": "assets/video/MCVI/mask_all_waiting_frame03.jpg",
+    "cover": "assets/cover/MCVI-mask_all_waiting_frame03.webp"
+  },
+  {
+    "source": "assets/video/blender/case_006_evidence_frame_06.jpg",
+    "cover": "assets/cover/blender-case_006_evidence_frame_06.webp"
+  },
+  {
+    "source": "assets/video/preference_miss/ebe04570-1688-4d74-ae51-fac6f3092da2.jpg",
+    "cover": "assets/cover/preference_miss-ebe04570-1688-4d74-ae51-fac6f3092da2.webp"
+  },
+  {
+    "source": "assets/video/preference_pass/f0d66b2f-5366-4d31-b9fd-9f5e1e9289f7.jpg",
+    "cover": "assets/cover/preference_pass-f0d66b2f-5366-4d31-b9fd-9f5e1e9289f7.webp"
+  },
+  {
+    "source": "assets/video/EgoExo/cam02_gold_162-174_frame03.jpg",
+    "cover": "assets/cover/EgoExo-cam02_gold_162-174_frame03.webp"
+  },
+  {
+    "source": "assets/video/MCVI/mask_all_waiting_frame04.jpg",
+    "cover": "assets/cover/MCVI-mask_all_waiting_frame04.webp"
+  },
+  {
+    "source": "assets/video/blender/case_006_evidence_frame_07.jpg",
+    "cover": "assets/cover/blender-case_006_evidence_frame_07.webp"
+  },
+  {
+    "source": "assets/video/preference_miss/fe683be6-26ab-4afc-83a6-7fa27833bced.jpg",
+    "cover": "assets/cover/preference_miss-fe683be6-26ab-4afc-83a6-7fa27833bced.webp"
+  },
+  {
+    "source": "assets/video/preference_pass/f407d780-f02f-4ed4-8655-72d5f5e278db.jpg",
+    "cover": "assets/cover/preference_pass-f407d780-f02f-4ed4-8655-72d5f5e278db.webp"
+  }
+]
