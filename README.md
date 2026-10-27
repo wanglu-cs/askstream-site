@@ -36,6 +36,14 @@ To add real cases, edit `assets/examples-data.js`. Set each case's `videoSrc` fr
 
 The Paper button opens the local PDF. Code and Benchmark URLs are taken from the links embedded in the PDF. The citation uses a provisional `@misc` entry; update its bibliographic metadata when an official publication or preprint identifier is available.
 
+## Waiting list
+
+- [ ] Eight study cases: add the real videos and multi-turn annotations (queries, action/answer options, user replies, and timestamps) for KVEM, VIM, ICM, PACM, AUQ, WUQ, UPM, and UPC, replacing the simulated examples.
+- [ ] Paper link: add the final public paper URL.
+- [ ] Code link: add or confirm the released code repository URL.
+- [ ] Data link: add or confirm the released dataset URL.
+- [ ] BibTeX: replace the provisional citation with the final bibliographic entry.
+
 ## GitHub Pages
 
 In **Settings → Pages**, choose **Deploy from a branch**, select the branch containing the site and **/ (root)**, then save. Include the PDF and `assets/` when publishing.
