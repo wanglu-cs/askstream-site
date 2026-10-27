@@ -11,7 +11,7 @@
   <title>AskStream | When and What to Ask Proactively</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/fonts/dancing-script-bold.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="assets/style.css?v=20261027-5">
+  <link rel="stylesheet" href="assets/style.css?v=20261027-6">
   <script src="assets/site.js?v=20261027-5" defer></script>
   <script src="assets/examples-data.js?v=20261027-5" defer></script>
   <script src="assets/examples.js?v=20261027-5" defer></script>
@@ -284,8 +284,10 @@
           <label class="model-filter">Models <select id="model-filter"><option value="all">All models</option><option value="closed">Offline closed-source</option><option value="open">Offline open-source</option><option value="streaming">Streaming proactive</option></select></label>
         </div>
         <p class="table-hint" id="table-description">Sorted by overall Ask-F1. Select a column heading to sort.</p>
-        <div class="table-scroll leaderboard-table" role="region" aria-label="AskStream benchmark results" tabindex="0">
+        <p class="mobile-table-hint" id="table-scroll-hint">Swipe the table sideways to see all metrics. Model names stay visible.</p>
+        <div class="table-scroll leaderboard-table" role="region" aria-label="AskStream benchmark results" aria-describedby="table-scroll-hint" tabindex="0">
           <table id="results" aria-describedby="table-description">
+            <colgroup><col class="rank-column"><col class="model-column"><col span="8" class="task-column"><col span="2" class="metric-column"><col class="f1-column"></colgroup>
             <thead>
               <tr class="group-head"><th rowspan="3" scope="col">#</th><th rowspan="3" scope="col" class="model-heading">Model</th><th colspan="4" scope="colgroup" class="video-group">Video uncertainty</th><th colspan="4" scope="colgroup" class="user-group">User uncertainty</th><th colspan="3" scope="colgroup" class="metric-group">Overall metrics</th></tr>
               <tr class="category-head"><th colspan="2" scope="colgroup">Explicit</th><th colspan="2" scope="colgroup">Implicit</th><th colspan="2" scope="colgroup">Intent</th><th colspan="2" scope="colgroup">Preference</th><th rowspan="2" scope="col"><button data-sort="8">S<sub>ask</sub><span class="sort-arrow">↕</span></button></th><th rowspan="2" scope="col"><button data-sort="9">S<sub>ans</sub><span class="sort-arrow">↕</span></button></th><th rowspan="2" scope="col" aria-sort="descending"><button data-sort="10">Ask-F1<span class="sort-arrow">↓</span></button></th></tr>

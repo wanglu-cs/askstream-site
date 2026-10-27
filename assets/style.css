@@ -46,6 +46,7 @@ figure{margin:32px 0 0;text-align:center}figure img{max-width:100%;width:100%;he
 .table-controls .setting-tabs button.active{background:#69538d;box-shadow:0 2px 5px #49306220}
 .model-filter select{border-color:#e3deeb;border-radius:8px;padding:9px 30px 9px 12px}
 .leaderboard-table{border-color:#e6e1ed;border-radius:12px;box-shadow:0 5px 24px #37214706}
+.mobile-table-hint{display:none}
 #results{border-collapse:separate;border-spacing:0;color:#5c5764}
 #results th,#results td{border-right:0;border-bottom:1px solid #eeeaf3;padding:13px 10px}
 #results thead th{background:#f9f7fc;color:#6f6281}
@@ -192,3 +193,24 @@ figure{margin:32px 0 0;text-align:center}figure img{max-width:100%;width:100%;he
 @media(max-width:800px){.example-columns{grid-template-columns:1fr;gap:28px}.example-media-column{max-width:100%}.annotation-column{border-top:1px solid #eee8f4;padding-top:26px}.case-count{display:none}#round-query{min-height:0}.round-navigation{padding:13px 24px}.example-workspace-header{padding:22px 24px}.timeline-heading,.option-tabs button{font-size:12px}.timestamp-button{font-size:9px}.timestamp-button time{font-size:10px}.option-text{font-size:13px}.timeline-footer,.reference-controls{font-size:10px}}
 @media(max-width:600px){.leaderboard-overview{gap:7px;margin:24px 0}.leaderboard-overview>div{padding:12px 10px;flex-direction:column;align-items:flex-start;gap:8px}.leaderboard-overview>div>span{font-size:9px;min-height:27px;max-width:none}.leaderboard-overview strong{font-size:26px}.leaderboard-overview strong span{font-size:13px}.table-controls .setting-tabs button{font-size:11px;padding:7px 10px}.table-controls{gap:12px}.model-filter select{max-width:180px;font-size:11px}.leaderboard-table{border-radius:8px}#results .model-cell,#results .model-heading{min-width:180px}#results th:first-child,#results tbody td:first-child{min-width:40px;width:40px}#results .model-heading,#results .model-cell{left:40px}.case-picker{gap:6px;margin-top:23px}.case-button{padding:11px 8px}.case-button strong{font-size:11px}.case-button>span{font-size:8px;min-height:39px;line-height:1.6}.demo-disclaimer{font-size:10px;margin-bottom:20px}.demo-badge{font-size:9px}.example-workspace{border-radius:12px}.example-workspace-header{padding:20px 16px}.case-category{font-size:8px;letter-spacing:.7px}#case-title{font-size:18px}.round-navigation{padding:10px 12px;gap:8px}#round-picker{gap:3px}.round-button{padding:7px 9px;flex-direction:column;gap:3px}.round-button strong{font-size:10px}.round-button span{font-size:8px}.round-arrows{gap:4px}.round-arrows button{width:26px;height:28px}.example-columns{padding:17px 14px 22px;gap:24px}.case-video-placeholder{padding:17px}.case-video-placeholder svg{width:48px;height:48px;margin:0}.case-video-placeholder strong{font-size:12px}.case-video-placeholder>span{font-size:10px}.video-phase{top:9px;left:9px;font-size:8px;padding:2px 6px}.timeline-heading{font-size:10px}.timestamp-group{gap:2px}.timestamp-button{font-size:8px}.timestamp-button time{font-size:9px}.timeline-footer{font-size:8px}.query-block{padding:15px}.annotation-heading{font-size:8px}#round-query{font-size:13px}.option-tabs{gap:18px}.option-tabs button{font-size:11px}.option-choice{padding:10px;gap:9px}.option-text{font-size:11px}.reference-controls{font-size:8px;gap:6px}#toggle-reference{font-size:9px}.example-status{padding:11px 15px;font-size:8px;line-height:1.8}}
 @media(max-width:600px){.timestamp-button{font-size:9px}.timestamp-button time{font-size:10px}.option-text{font-size:12px}.option-tabs button{font-size:12px}.reference-controls{font-size:9px}#toggle-reference{font-size:10px}.annotation-heading{font-size:9px}.round-button strong{font-size:11px}.round-button span{font-size:9px}}
+
+/* Give sticky columns explicit widths on phones, including Safari/WebViews.
+   Automatic table layout can otherwise expand them over the metric columns. */
+@media(max-width:600px){
+  .mobile-table-hint{display:block;font-size:10px;line-height:1.7;color:#8c779b;margin:0 0 12px}
+  .leaderboard-table{-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:#bdabcf #f4f0f8}
+  #results{table-layout:fixed;width:944px;min-width:944px}
+  #results col.rank-column{width:34px}
+  #results col.model-column{width:146px}
+  #results col.task-column{width:68px}
+  #results col.metric-column{width:72px}
+  #results col.f1-column{width:76px}
+  #results .group-head>th:first-child,#results tbody td:first-child{left:0;width:34px;min-width:0;padding-left:4px;padding-right:4px}
+  #results .model-heading,#results .model-cell{left:34px;width:146px;min-width:0;max-width:146px;padding-left:9px;padding-right:9px;overflow-wrap:anywhere}
+  #results .model-cell{font-size:11px}
+  #results .model-cell small{font-size:9px;line-height:1.5;white-space:normal}
+  #results th,#results td{padding-top:11px;padding-bottom:11px}
+  #results .score-cell{min-width:0;font-size:13px}
+  #results .score-bar{width:50px}
+  #results .rank-badge{width:23px;height:23px}
+}
