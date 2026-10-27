@@ -11,8 +11,10 @@
   <title>AskStream | When and What to Ask Proactively</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/fonts/dancing-script-bold.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="assets/style.css?v=20261027-4">
-  <script src="assets/site.js?v=20261027-4" defer></script>
+  <link rel="stylesheet" href="assets/style.css?v=20261027-5">
+  <script src="assets/site.js?v=20261027-5" defer></script>
+  <script src="assets/examples-data.js?v=20261027-5" defer></script>
+  <script src="assets/examples.js?v=20261027-5" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#paper">Skip to paper</a>
@@ -274,17 +276,18 @@
     <section class="section" id="leaderboard" aria-labelledby="leaderboard-title">
       <div class="container wide">
         <h2 id="leaderboard-title">Leaderboard</h2>
-        <p class="section-intro">Evaluating <strong>when and what to ask</strong>, and <strong>when to answer</strong>.</p>
+        <p class="section-intro">Evaluating <strong>when and what to ask</strong>, and <strong>when and what to answer</strong>.</p>
         <p class="section-intro">Results from the paper. All subtask scores are Ask-F1 (%); higher is better.</p>
+        <div class="leaderboard-overview" aria-label="Results overview"><div><span>Models evaluated</span><strong id="visible-model-count">14</strong></div><div><span>Uncertainty subtasks</span><strong>8</strong></div><div><span>Best Ask-F1 in view</span><strong id="best-score">52.18<span>%</span></strong></div></div>
         <div class="table-controls">
           <div class="setting-tabs" role="group" aria-label="Evaluation setting"><button type="button" class="active" data-setting="mc" aria-pressed="true">Multiple-choice</button><button type="button" data-setting="oe" aria-pressed="false">Open-ended</button></div>
           <label class="model-filter">Models <select id="model-filter"><option value="all">All models</option><option value="closed">Offline closed-source</option><option value="open">Offline open-source</option><option value="streaming">Streaming proactive</option></select></label>
         </div>
         <p class="table-hint" id="table-description">Sorted by overall Ask-F1. Select a column heading to sort.</p>
-        <div class="table-scroll" role="region" aria-label="AskStream benchmark results" tabindex="0">
+        <div class="table-scroll leaderboard-table" role="region" aria-label="AskStream benchmark results" tabindex="0">
           <table id="results" aria-describedby="table-description">
             <thead>
-              <tr class="group-head"><th rowspan="3" scope="col">#</th><th rowspan="3" scope="col" class="model-heading">Model</th><th colspan="4" scope="colgroup">Video uncertainty</th><th colspan="4" scope="colgroup">User uncertainty</th><th colspan="3" scope="colgroup">Overall metrics</th></tr>
+              <tr class="group-head"><th rowspan="3" scope="col">#</th><th rowspan="3" scope="col" class="model-heading">Model</th><th colspan="4" scope="colgroup" class="video-group">Video uncertainty</th><th colspan="4" scope="colgroup" class="user-group">User uncertainty</th><th colspan="3" scope="colgroup" class="metric-group">Overall metrics</th></tr>
               <tr class="category-head"><th colspan="2" scope="colgroup">Explicit</th><th colspan="2" scope="colgroup">Implicit</th><th colspan="2" scope="colgroup">Intent</th><th colspan="2" scope="colgroup">Preference</th><th rowspan="2" scope="col"><button data-sort="8">S<sub>ask</sub><span class="sort-arrow">↕</span></button></th><th rowspan="2" scope="col"><button data-sort="9">S<sub>ans</sub><span class="sort-arrow">↕</span></button></th><th rowspan="2" scope="col" aria-sort="descending"><button data-sort="10">Ask-F1<span class="sort-arrow">↓</span></button></th></tr>
               <tr class="subtask-head"><th scope="col"><button data-sort="0"><abbr title="Key Visual Evidence Missing">KVEM</abbr><span class="sort-arrow">↕</span></button></th><th scope="col"><button data-sort="1"><abbr title="Viewpoint Information Missing">VIM</abbr><span class="sort-arrow">↕</span></button></th><th scope="col"><button data-sort="2"><abbr title="Individual Concept Missing">ICM</abbr><span class="sort-arrow">↕</span></button></th><th scope="col"><button data-sort="3"><abbr title="Personalized Action Concept Missing">PACM</abbr><span class="sort-arrow">↕</span></button></th><th scope="col"><button data-sort="4"><abbr title="Ambiguous User Question">AUQ</abbr><span class="sort-arrow">↕</span></button></th><th scope="col"><button data-sort="5"><abbr title="Wrong User Question">WUQ</abbr><span class="sort-arrow">↕</span></button></th><th scope="col"><button data-sort="6"><abbr title="User Preference Missing">UPM</abbr><span class="sort-arrow">↕</span></button></th><th scope="col"><button data-sort="7"><abbr title="User Preference Conflict">UPC</abbr><span class="sort-arrow">↕</span></button></th></tr>
             </thead>
@@ -340,20 +343,49 @@
       </div>
     </section>
     <section class="section light" id="examples" aria-labelledby="examples-title">
-      <div class="container narrow">
+      <div class="container example-container">
+        <p class="section-eyebrow">WAIT · ASK · ANSWER</p>
         <h2 id="examples-title">AskStream Examples</h2>
-        <div class="example-tabs" role="group" aria-label="Example uncertainty source"><button type="button" class="active" data-example="video" aria-pressed="true">Video uncertainty</button><button type="button" data-example="user" aria-pressed="false">User uncertainty</button></div>
-        <div class="example-panel" id="example-video">
-          <h3>Key Visual Evidence Missing</h3>
-          <!-- Replace this placeholder with a video when the demo is available. -->
-          <div class="media-placeholder" role="img" aria-label="Video example placeholder; video coming soon"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="9" y="15" width="46" height="34" rx="4"/><path d="m27 24 14 8-14 8Z"/></svg><span>Video coming soon</span></div>
-          <div class="example-dialogue"><p><span class="dialogue-label">Query</span>Tell me what's behind the cup when it appears.</p><p><span class="dialogue-label ask-label">Ask</span>Please move the cup away.</p><p><span class="dialogue-label">User</span>I moved the cup.</p><p><span class="dialogue-label answer-label">Answer</span>It is a screwdriver with a red handle.</p></div>
+        <p class="section-intro">Eight tasks. Continuous video. Multiple turns of interaction.</p>
+        <p class="demo-disclaimer"><span class="demo-badge">Illustrative demo</span> Timings, choices, and multi-turn interactions are simulated. Videos will be added later.</p>
+        <div id="case-picker" class="case-picker" role="group" aria-label="Choose an example task"></div>
+        <div class="example-workspace">
+          <div class="example-workspace-header">
+            <div><p id="case-category" class="case-category"></p><h3 id="case-title"></h3></div>
+            <span class="case-count">8 tasks <span aria-hidden="true">/</span> 3 turns each</span>
+          </div>
+          <div class="round-navigation">
+            <span class="round-navigation-label">Interaction turns</span>
+            <div id="round-picker" role="group" aria-label="Choose an interaction turn"></div>
+            <div class="round-arrows"><button id="previous-round" type="button" aria-label="Previous turn">←</button><button id="next-round" type="button" aria-label="Next turn">→</button></div>
+          </div>
+          <div class="example-columns">
+            <div class="example-media-column">
+              <div class="case-video-stage">
+                <video id="case-video" controls playsinline preload="metadata" hidden aria-label="Example video"></video>
+                <div id="case-video-placeholder" class="case-video-placeholder"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="9" y="15" width="46" height="34" rx="4"/><path d="m27 24 14 8-14 8Z"/></svg><strong>Video coming soon</strong><span id="case-scene"></span></div>
+                <span id="video-phase" class="video-phase">WAIT</span>
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading"><span>Annotated timeline</span><span><time id="current-time">00:00</time><span class="time-divider"> / </span><time id="total-time">04:30</time></span></div>
+                <label class="sr-only" for="case-scrubber">Seek through example timeline</label>
+                <input id="case-scrubber" class="case-scrubber" type="range" min="0" max="270" step="1" value="0">
+                <div id="timeline-windows" class="timeline-windows" aria-label="Annotated action windows"></div>
+                <div id="timeline-markers" class="timeline-markers" role="group" aria-label="Jump to an annotated timestamp"></div>
+                <div class="timeline-footer"><span>Click a window or timestamp to explore.</span><span class="timeline-legend"><span class="wait-dot">Wait</span><span class="ask-dot">Ask</span><span class="answer-dot">Answer</span></span></div>
+              </div>
+            </div>
+            <div class="annotation-column">
+              <div class="query-block"><div class="annotation-heading"><span class="annotation-eyebrow">USER QUERY</span><span id="query-turn-label"></span></div><p id="round-query"></p></div>
+              <div class="option-tabs" role="tablist" aria-label="Interaction option type"><button id="action-options-tab" type="button" role="tab" aria-controls="options-panel" aria-selected="true" data-option-type="action">Action options <span id="action-option-count"></span></button><button id="answer-options-tab" type="button" role="tab" aria-controls="options-panel" aria-selected="false" data-option-type="answer" tabindex="-1">Answer options <span id="answer-option-count"></span></button></div>
+              <div id="options-panel" class="options-panel" role="tabpanel" aria-labelledby="action-options-tab"><fieldset id="option-list"><legend class="sr-only">Choose an action option</legend></fieldset></div>
+              <div class="reference-controls"><span>Explore the choices, then compare.</span><button id="toggle-reference" type="button" aria-expanded="false" aria-controls="reference-panel">Show reference</button></div>
+              <div id="reference-panel" class="reference-panel" hidden><p><span>ASK</span><strong id="reference-ask"></strong></p><p><span>USER REPLY</span><strong id="reference-reply"></strong></p><p><span>ANSWER</span><strong id="reference-answer"></strong></p></div>
+            </div>
+          </div>
+          <p id="example-status" class="example-status" role="status" aria-live="polite"></p>
         </div>
-        <div class="example-panel" id="example-user" hidden>
-          <h3>Ambiguous User Question</h3>
-          <div class="media-placeholder" role="img" aria-label="User uncertainty video placeholder; video coming soon"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="9" y="15" width="46" height="34" rx="4"/><path d="m27 24 14 8-14 8Z"/></svg><span>Video coming soon</span></div>
-          <div class="example-dialogue"><p><span class="dialogue-label">Query</span>Remind me when the man in a suit appears again.</p><p><span class="dialogue-label ask-label">Ask</span>Two men are wearing suits. Which one do you mean?</p><p><span class="dialogue-label">User</span>The man in a black suit.</p><p><span class="dialogue-label answer-label">Answer</span>He appeared.</p></div>
-        </div>
+        <noscript><p>Enable JavaScript to explore the eight interactive examples.</p></noscript>
       </div>
     </section>
     <section class="section" id="analysis" aria-labelledby="analysis-title">

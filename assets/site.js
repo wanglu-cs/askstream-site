@@ -35,7 +35,10 @@ function renderResults() {
     const row = document.createElement('tr');
     if (model[setting][10] === maximums[10]) row.classList.add('best-row');
     const rank = document.createElement('td');
-    rank.textContent = index + 1;
+    const rankBadge = document.createElement('span');
+    rankBadge.className = `rank-badge${index < 3 ? ' rank-' + (index + 1) : ''}`;
+    rankBadge.textContent = index + 1;
+    rank.append(rankBadge);
     row.append(rank);
     const name = document.createElement('th');
     name.scope = 'row';
@@ -48,7 +51,17 @@ function renderResults() {
     model[setting].forEach((value,column) => {
       const cell = document.createElement('td');
       cell.textContent = value.toFixed(2);
-      if (column === 10) cell.classList.add('score-cell');
+      if (column === 10) {
+        cell.classList.add('score-cell');
+        const score = document.createElement('span');
+        score.className = 'score-value';
+        score.textContent = value.toFixed(2);
+        const bar = document.createElement('span');
+        bar.className = 'score-bar';
+        bar.style.setProperty('--score', `${value}%`);
+        bar.setAttribute('aria-hidden', 'true');
+        cell.replaceChildren(score, bar);
+      }
       if (value > 0 && value === maximums[column]) cell.classList.add('best-number');
       row.append(cell);
     });
@@ -61,6 +74,11 @@ function renderResults() {
     button.closest('th').removeAttribute('aria-sort');
     if (active) button.closest('th').setAttribute('aria-sort', descending ? 'descending' : 'ascending');
   });
+  document.querySelector('#visible-model-count').textContent = visible.length;
+  document.querySelector('#best-score').replaceChildren(document.createTextNode(maximums[10].toFixed(2)));
+  const percent = document.createElement('span');
+  percent.textContent = '%';
+  document.querySelector('#best-score').append(percent);
   const label = setting === 'mc' ? 'Multiple-choice' : 'Open-ended';
   document.querySelector('#results-status').textContent = `${visible.length} models · ${label} · Paper Table ${setting === 'mc' ? '2' : '6'}`;
   document.querySelector('#table-description').textContent = `Sorted by ${metricNames[sortColumn]} (${descending ? 'highest first' : 'lowest first'}). Select a column heading to sort.`;
@@ -86,18 +104,6 @@ document.querySelectorAll('[data-sort]').forEach(button => {
 });
 modelFilter.addEventListener('change',renderResults);
 renderResults();
-
-document.querySelectorAll('[data-example]').forEach(button => {
-  button.addEventListener('click', () => {
-    document.querySelectorAll('[data-example]').forEach(tab => {
-      tab.classList.toggle('active',tab === button);
-      tab.setAttribute('aria-pressed',String(tab === button));
-    });
-    document.querySelectorAll('.example-panel').forEach(panel => {
-      panel.hidden = panel.id !== `example-${button.dataset.example}`;
-    });
-  });
-});
 
 document.querySelector('#copy-citation').addEventListener('click', async () => {
   const text = document.querySelector('#citation-code').textContent;
