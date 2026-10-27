@@ -2,40 +2,189 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-  <title>AskStream | Project Page</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f8fafc;
-      color: #1e293b;
-      text-align: center;
-      margin: 0;
-      padding: 80px 20px;
-    }
-    main {
-      max-width: 900px;
-      margin: auto;
-    }
-    h1 {
-      font-size: 56px;
-      color: #2563eb;
-    }
-    .subtitle {
-      font-size: 24px;
-      line-height: 1.6;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AskStream: When and What to Ask Proactively under Uncertainty in Streaming Video Understanding. A multi-turn benchmark with 438 videos, eight subtasks, and frame-level action windows.">
+  <meta name="theme-color" content="#222222">
+  <meta property="og:title" content="AskStream: When and What to Ask Proactively">
+  <meta property="og:description" content="Proactive information seeking under uncertainty in streaming video understanding. Wait, ask, and answer.">
+  <meta property="og:type" content="website">
+  <title>AskStream | When and What to Ask Proactively</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/dancing-script-bold.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/site.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#paper">Skip to paper</a>
+  <!-- Cover background reserved for project imagery. -->
+  <header class="cover" id="top">
+    <div class="cover-content">
+      <p class="cover-name">AskStream</p>
+      <p class="cover-title">When and What to Ask Proactively<br>under Uncertainty in Streaming Video Understanding</p>
+    </div>
+    <a class="learn-more" href="#paper"><span>Learn More</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+  </header>
   <main>
-    <h1>AskStream</h1>
-    <p class="subtitle">
-      When and What to Ask Proactively under
-      Uncertainty in Streaming Video Understanding
-    </p>
-    <p>Official Project Page</p>
+    <section class="paper-header section" id="paper" aria-labelledby="paper-title">
+      <div class="container narrow">
+        <h1 id="paper-title">AskStream: When and What to Ask Proactively under Uncertainty in Streaming Video Understanding</h1>
+        <div class="authors">
+          <span><a href="mailto:wanglu2026@ia.ac.cn">Lu Wang</a><sup>1,2</sup>,</span>
+          <span>Zhuoran Jin<sup>1</sup>,</span>
+          <span>Longxiang Wang<sup>1</sup>,</span>
+          <span>Junhong Chen<sup>1</sup>,</span>
+          <span>Yupu Hao<sup>1</sup>,</span>
+          <span>Yao Xu<sup>2</sup>,</span>
+          <span>Daojian Zeng<sup>3</sup>,</span>
+          <span>Yubo Chen<sup>4</sup>,</span>
+          <span>Kang Liu<sup>1</sup>,</span>
+          <span>Guang Liu<sup>2</sup>,</span>
+          <span>Jun Zhao<sup>1</sup></span>
+        </div>
+        <div class="affiliations">
+          <p><sup>1</sup>The Key Laboratory of Cognition and Decision Intelligence for Complex Systems,<br class="desktop-break"> Institute of Automation, Chinese Academy of Sciences, Beijing, China</p>
+          <p><sup>2</sup>Beijing Academy of Artificial Intelligence (BAAI), Beijing, China</p>
+          <p><sup>3</sup>Hunan Normal University, China &nbsp; <sup>4</sup>Minzu University of China, Beijing, China</p>
+        </div>
+        <div class="publication-links">
+          <a class="resource-button" href="ICLR2027.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M8 13h8M8 17h6"/></svg>Paper</a>
+          <a class="resource-button" href="https://huggingface.co/datasets/wanglucs/AskStream" target="_blank" rel="noopener"><span aria-hidden="true">🤗</span>Benchmark</a>
+          <a class="resource-button" href="https://github.com/wanglu-cs/AskStream" target="_blank" rel="noopener"><svg class="github-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1a11 11 0 0 0-3.48 21.44c.55.1.75-.24.75-.53v-2.05c-3.06.66-3.71-1.3-3.71-1.3-.5-1.27-1.22-1.61-1.22-1.61-1-.69.08-.67.08-.67 1.1.08 1.68 1.13 1.68 1.13.98 1.68 2.58 1.2 3.2.92.1-.72.39-1.2.7-1.48-2.44-.28-5.01-1.22-5.01-5.44 0-1.2.43-2.18 1.13-2.95-.11-.28-.49-1.4.11-2.91 0 0 .92-.3 3.03 1.13A10.6 10.6 0 0 1 12 6.3c.94 0 1.88.13 2.76.37 2.1-1.43 3.02-1.13 3.02-1.13.6 1.51.23 2.63.11 2.91.71.77 1.13 1.75 1.13 2.95 0 4.23-2.57 5.16-5.03 5.43.4.35.75 1.02.75 2.06v3.02c0 .3.2.64.76.53A11 11 0 0 0 12 1Z"/></svg>Code</a>
+          <a class="resource-button" href="#leaderboard"><span aria-hidden="true">🏆</span>Leaderboard</a>
+        </div>
+      </div>
+    </section>
+    <nav class="section-nav" aria-label="Page sections"><a href="#abstract">Abstract</a><a href="#leaderboard">Leaderboard</a><a href="#benchmark">Benchmark</a><a href="#examples">Examples</a><a href="#analysis">Analysis</a><a href="#citation">BibTeX</a></nav>
+    <section class="section light" id="abstract" aria-labelledby="abstract-title">
+      <div class="container reading">
+        <h2 id="abstract-title">Abstract</h2>
+        <div class="prose justified">
+          <p>Recent advances in multimodal large language models have increased interest in interaction paradigms for video understanding. The evolution from offline to streaming and proactive interaction has gradually shifted models from passive responders toward more proactive agents that can decide when to answer. However, existing proactive paradigms typically assume that the information required to answer a query is complete, leaving models to only wait or answer. In the real world, however, information is often incomplete due to uncertainty from either the video or the user. In proactive paradigms, such uncertainty can cause the model to wait forever or generate highly hallucinatory responses. We therefore argue that proactive interaction should be redefined with a third action: <strong>ask</strong>, allowing models to actively ask for missing information. To study when and what models should ask before answering, we introduce <strong>AskStream</strong>, the first multi-turn benchmark spanning video and user uncertainty for streaming video understanding, with <strong>four task categories and eight subtasks</strong>. It contains <strong>438 videos</strong> with <strong>2,714 manually annotated frame-level time windows</strong> across three types: wait, ask, and answer. Across both multiple-choice and open-ended settings, even the strongest model attains only <strong>52.18%</strong> on our proposed Ask-F1 metric, highlighting substantial limitations in proactive information seeking under uncertainty.</p>
+          <p class="takeaway">💡 Can your model recognize uncertainty, ask for the missing information, and answer at the right time?</p>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="leaderboard" aria-labelledby="leaderboard-title">
+      <div class="container wide">
+        <h2 id="leaderboard-title">Leaderboard</h2>
+        <p class="section-intro">Evaluating <strong>when and what to ask</strong>, and <strong>when to answer</strong>.</p>
+        <p class="section-intro">Results from the paper. All subtask scores are Ask-F1 (%); higher is better.</p>
+        <div class="table-controls">
+          <div class="setting-tabs" role="group" aria-label="Evaluation setting"><button type="button" class="active" data-setting="mc" aria-pressed="true">Multiple-choice</button><button type="button" data-setting="oe" aria-pressed="false">Open-ended</button></div>
+          <label class="model-filter">Models <select id="model-filter"><option value="all">All models</option><option value="closed">Offline closed-source</option><option value="open">Offline open-source</option><option value="streaming">Streaming proactive</option></select></label>
+        </div>
+        <p class="table-hint" id="table-description">Sorted by overall Ask-F1. Select a column heading to sort.</p>
+        <div class="table-scroll" role="region" aria-label="AskStream benchmark results" tabindex="0">
+          <table id="results" aria-describedby="table-description">
+            <thead>
+              <tr class="group-head"><th rowspan="3" scope="col">#</th><th rowspan="3" scope="col" class="model-heading">Model</th><th colspan="4" scope="colgroup">Video uncertainty</th><th colspan="4" scope="colgroup">User uncertainty</th><th colspan="3" scope="colgroup">Overall metrics</th></tr>
+              <tr class="category-head"><th colspan="2" scope="colgroup">Explicit</th><th colspan="2" scope="colgroup">Implicit</th><th colspan="2" scope="colgroup">Intent</th><th colspan="2" scope="colgroup">Preference</th><th rowspan="2" scope="col"><button data-sort="8">S<sub>ask</sub><span class="sort-arrow">↕</span></button></th><th rowspan="2" scope="col"><button data-sort="9">S<sub>ans</sub><span class="sort-arrow">↕</span></button></th><th rowspan="2" scope="col" aria-sort="descending"><button data-sort="10">Ask-F1<span class="sort-arrow">↓</span></button></th></tr>
+              <tr class="subtask-head"><th scope="col"><button data-sort="0"><abbr title="Key Visual Evidence Missing">KVEM</abbr><span class="sort-arrow">↕</span></button></th><th scope="col"><button data-sort="1"><abbr title="Viewpoint Information Missing">VIM</abbr><span class="sort-arrow">↕</span></button></th><th scope="col"><button data-sort="2"><abbr title="Individual Concept Missing">ICM</abbr><span class="sort-arrow">↕</span></button></th><th scope="col"><button data-sort="3"><abbr title="Personalized Action Concept Missing">PACM</abbr><span class="sort-arrow">↕</span></button></th><th scope="col"><button data-sort="4"><abbr title="Ambiguous User Question">AUQ</abbr><span class="sort-arrow">↕</span></button></th><th scope="col"><button data-sort="5"><abbr title="Wrong User Question">WUQ</abbr><span class="sort-arrow">↕</span></button></th><th scope="col"><button data-sort="6"><abbr title="User Preference Missing">UPM</abbr><span class="sort-arrow">↕</span></button></th><th scope="col"><button data-sort="7"><abbr title="User Preference Conflict">UPC</abbr><span class="sort-arrow">↕</span></button></th></tr>
+            </thead>
+            <tbody id="results-body"></tbody>
+          </table>
+        </div>
+        <p id="results-status" class="table-note" aria-live="polite"></p>
+        <p class="table-note">S<sub>ask</sub> and S<sub>ans</sub> measure timing-aware asking and answering. Ask-F1 is their harmonic mean. Offline models use StreamHarness; native streaming models use their own memory mechanisms.</p>
+        <noscript><p>Enable JavaScript to explore the results, or <a href="ICLR2027.pdf#page=9">read Table 2 in the paper</a>.</p></noscript>
+      </div>
+    </section>
+    <section class="section light" id="benchmark" aria-labelledby="benchmark-title">
+      <div class="container narrow">
+        <h2 id="benchmark-title">Benchmark Introduction</h2>
+        <p class="section-intro">From passive responses to proactive information seeking.</p>
+        <div class="prose"><p>Existing proactive video models choose between waiting and answering. When visual evidence is missing or a user's intent is unclear, neither action can resolve the uncertainty. <strong>AskStream introduces a third action, ask</strong>, so models can request the information they need before answering.</p></div>
+        <figure><img src="assets/overview.png" width="1194" height="651" loading="lazy" alt="Evolution from offline, streaming, and proactive video understanding to AskStream, which introduces asking for missing video evidence and clarifying user intent."><figcaption>AskStream extends the conventional action space of <strong>wait</strong> and <strong>answer</strong> with <strong>ask</strong>.</figcaption></figure>
+        <div class="action-sequence" aria-label="Three model actions"><span class="action wait">WAIT</span><span class="action-separator" aria-hidden="true">→</span><span class="action ask">ASK</span><span class="action-separator" aria-hidden="true">→</span><span class="action answer">ANSWER</span></div>
+        <p class="action-description">Observe the stream. Resolve the uncertainty. Respond with sufficient evidence.</p>
+      </div>
+    </section>
+    <section class="section" aria-labelledby="taxonomy-title">
+      <div class="container narrow">
+        <h2 id="taxonomy-title">Video and User Uncertainty</h2>
+        <p class="section-intro">Two sources of uncertainty. Four task categories. Eight subtasks.</p>
+        <figure class="taxonomy-figure"><img src="assets/task-taxonomy.png" width="792" height="762" loading="lazy" alt="Examples of eight subtasks: missing visual evidence, missing viewpoints, missing individual concepts, missing action concepts, ambiguous questions, wrong questions, missing preferences, and conflicting preferences."></figure>
+        <div class="taxonomy-grid">
+          <div><h3>Video uncertainty</h3><p><strong>Explicit information</strong><br>Key Visual Evidence Missing (KVEM)<br>Viewpoint Information Missing (VIM)</p><p><strong>Implicit information</strong><br>Individual Concept Missing (ICM)<br>Personalized Action Concept Missing (PACM)</p></div>
+          <div><h3>User uncertainty</h3><p><strong>User intent</strong><br>Ambiguous User Question (AUQ)<br>Wrong User Question (WUQ)</p><p><strong>User preference</strong><br>User Preference Missing (UPM)<br>User Preference Conflict (UPC)</p></div>
+        </div>
+      </div>
+    </section>
+    <section class="section light" aria-labelledby="construction-title">
+      <div class="container narrow">
+        <h2 id="construction-title">Benchmark Construction Pipeline</h2>
+        <div class="construction-layout">
+          <figure><img src="assets/construction-pipeline.png" width="390" height="762" loading="lazy" alt="Five-stage pipeline: source data collection, time window annotation, key evidence obfuscation, action and answer option generation, and human verification."></figure>
+          <ol class="pipeline-steps">
+            <li><h3>Source data collection</h3><p>Collect videos from YouTube and existing datasets, and synthesize additional videos using Blender.</p></li>
+            <li><h3>Time window annotation</h3><p>Manually annotate queries, key entities, evidence, and frame-level temporal windows.</p></li>
+            <li><h3>Key evidence obfuscation</h3><p>Mask visual evidence, switch viewpoints, or withhold concepts, intent, and preferences.</p></li>
+            <li><h3>Action &amp; answer option generation</h3><p>Generate candidate actions and answers for each interaction event.</p></li>
+            <li><h3>Human verification</h3><p>Verify that the missing information is necessary, the revealed evidence is sufficient, and each candidate set has one correct option.</p></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+    <section class="section" aria-labelledby="statistics-title">
+      <div class="container narrow">
+        <h2 id="statistics-title">Data Statistics</h2>
+        <div class="statistics-summary"><div><strong>438</strong><span>Videos</span></div><div><strong>1,401</strong><span>Questions</span></div><div><strong>2,714</strong><span>Annotated windows</span></div><div><strong>9</strong><span>Domains</span></div></div>
+        <figure><img src="assets/statistics.png" width="1194" height="579" loading="lazy" alt="AskStream task distribution, data sources, effective wait/ask/answer durations, and video distribution across nine domains."><figcaption>Videos range from 16.72 seconds to 118 minutes, with an average of 3.2 interaction turns per video. WAIT, ASK, and ANSWER windows cover 33.92, 30.47, and 12.00 hours, respectively.</figcaption></figure>
+      </div>
+    </section>
+    <section class="section light" id="examples" aria-labelledby="examples-title">
+      <div class="container narrow">
+        <h2 id="examples-title">AskStream Examples</h2>
+        <div class="example-tabs" role="group" aria-label="Example uncertainty source"><button type="button" class="active" data-example="video" aria-pressed="true">Video uncertainty</button><button type="button" data-example="user" aria-pressed="false">User uncertainty</button></div>
+        <div class="example-panel" id="example-video">
+          <h3>Key Visual Evidence Missing</h3>
+          <!-- Replace this placeholder with a video when the demo is available. -->
+          <div class="media-placeholder" role="img" aria-label="Video example placeholder; video coming soon"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="9" y="15" width="46" height="34" rx="4"/><path d="m27 24 14 8-14 8Z"/></svg><span>Video coming soon</span></div>
+          <div class="example-dialogue"><p><span class="dialogue-label">Query</span>Tell me what's behind the cup when it appears.</p><p><span class="dialogue-label ask-label">Ask</span>Please move the cup away.</p><p><span class="dialogue-label">User</span>I moved the cup.</p><p><span class="dialogue-label answer-label">Answer</span>It is a screwdriver with a red handle.</p></div>
+        </div>
+        <div class="example-panel" id="example-user" hidden>
+          <h3>Ambiguous User Question</h3>
+          <div class="media-placeholder" role="img" aria-label="User uncertainty video placeholder; video coming soon"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="9" y="15" width="46" height="34" rx="4"/><path d="m27 24 14 8-14 8Z"/></svg><span>Video coming soon</span></div>
+          <div class="example-dialogue"><p><span class="dialogue-label">Query</span>Remind me when the man in a suit appears again.</p><p><span class="dialogue-label ask-label">Ask</span>Two men are wearing suits. Which one do you mean?</p><p><span class="dialogue-label">User</span>The man in a black suit.</p><p><span class="dialogue-label answer-label">Answer</span>He appeared.</p></div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="analysis" aria-labelledby="analysis-title">
+      <div class="container narrow">
+        <h2 id="analysis-title">Analysis</h2>
+        <h3 class="analysis-heading">Asking for the right evidence reduces uncertainty</h3>
+        <figure><img src="assets/uncertainty-analysis.png" width="1194" height="297" loading="lazy" alt="Correct evidence reduces answer entropy and improves accuracy from 42.3 percent with blurred input to 62.3 percent after asking, close to 63.1 percent with clear input."><figcaption>Acquiring key evidence improves accuracy from <strong>42.3%</strong> to <strong>62.3%</strong>, approaching the <strong>63.1%</strong> achieved with fully clear input.</figcaption></figure>
+        <h3 class="analysis-heading">When and what to ask remain major bottlenecks</h3>
+        <figure><img src="assets/oracle-analysis.png" width="1200" height="387" loading="lazy" alt="Oracle ablation on KVEM: Ask-F1 rises from 37.17 to 58.30 with oracle ask timing, and to 81.0 with both oracle ask timing and content."><figcaption>On KVEM, providing oracle information about both <strong>when</strong> and <strong>what</strong> to ask raises Ask-F1 from <strong>37.17%</strong> to <strong>81.00%</strong>.</figcaption></figure>
+        <h3 class="analysis-heading">Contextual memory and additional asking opportunities</h3>
+        <figure><img src="assets/memory-and-budget.png" width="1194" height="312" loading="lazy" alt="Contextual memory improves user uncertainty tasks. Increasing the ask budget from 1 to 16 improves KVEM open-ended Ask-F1 from 27.61 to 52.35."><figcaption>Contextual memory helps resolve user uncertainty. Increasing the ASK budget improves proactive information seeking, with diminishing gains.</figcaption></figure>
+      </div>
+    </section>
+    <section class="section light" aria-labelledby="harness-title">
+      <div class="container reading">
+        <h2 id="harness-title">StreamHarness</h2>
+        <p class="section-intro">Dense recent observations, compressed historical context.</p>
+        <div class="prose"><p>Our hierarchical memory framework retains the most recent <strong>10 frames at 1 fps</strong>, summarizes every 10 frames into a mid-term memory, and consolidates every four mid-term memories into a long-term block. Up to eight long-term blocks preserve earlier context. Models choose an action once per second, using only information observed so far.</p></div>
+        <div class="table-scroll"><table class="ablation-table"><caption>Memory ablation · Gemini-3.8 Flash · Multiple-choice</caption><thead><tr><th scope="col">Context strategy</th><th scope="col">S<sub>ask</sub></th><th scope="col">S<sub>ans</sub></th><th scope="col">Ask-F1</th></tr></thead><tbody><tr class="best-row"><th scope="row">StreamHarness</th><td>44.63</td><td>62.80</td><td><strong>52.18</strong></td></tr><tr><th scope="row">Sliding window</th><td>35.92</td><td>49.71</td><td>41.70</td></tr><tr><th scope="row">Uniform sampling (128 frames)</th><td>22.41</td><td>33.08</td><td>26.72</td></tr><tr><th scope="row">Uniform sampling (64 frames)</th><td>13.86</td><td>21.94</td><td>16.99</td></tr></tbody></table></div>
+      </div>
+    </section>
+    <section class="section citation-section" id="citation" aria-labelledby="citation-title">
+      <div class="container narrow">
+        <div class="citation-heading"><h2 id="citation-title">BibTeX</h2><button type="button" id="copy-citation" class="copy-button">Copy citation</button></div>
+        <pre tabindex="0"><code id="citation-code">@misc{wang2027askstream,
+  title={AskStream: When and What to Ask Proactively under
+         Uncertainty in Streaming Video Understanding},
+  author={Lu Wang and Zhuoran Jin and Longxiang Wang and
+          Junhong Chen and Yupu Hao and Yao Xu and Daojian Zeng and
+          Yubo Chen and Kang Liu and Guang Liu and Jun Zhao},
+  year={2027},
+  howpublished={\url{https://github.com/wanglu-cs/AskStream}}
+}</code></pre>
+        <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
+      </div>
+    </section>
   </main>
+  <footer><p class="footer-name">AskStream</p><p>When and What to Ask Proactively under Uncertainty in Streaming Video Understanding</p><p>Website design inspired by <a href="https://mmr-v.github.io/" target="_blank" rel="noopener">MMR-V</a>.</p></footer>
+  <a href="#top" class="back-to-top" aria-label="Back to top" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 14 6-6 6 6"/></svg></a>
 </body>
 </html>
