@@ -11,35 +11,52 @@
   <title>AskStream | When and What to Ask Proactively</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/fonts/dancing-script-bold.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="assets/style.css">
-  <script src="assets/site.js" defer></script>
+  <link rel="stylesheet" href="assets/style.css?v=20261027-3">
+  <script src="assets/site.js?v=20261027-3" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#paper">Skip to paper</a>
-  <!-- Cover background reserved for project imagery. -->
+  <!-- Animated filmstrips use real screenshots from the paper’s A.9 study cases. -->
   <header class="cover" id="top">
+    <div class="cover-filmstrips" aria-hidden="true">
+      <div class="filmstrip filmstrip-1"><div class="filmstrip-track">
+        <div class="filmstrip-group"><div class="film-frame"><img src="assets/cover/visual-masked.webp" width="480" height="270" alt="" decoding="async"></div><div class="film-frame"><img src="assets/cover/visual-revealed.webp" width="480" height="270" alt="" decoding="async"></div><div class="film-frame"><img src="assets/cover/view-initial.webp" width="480" height="270" alt="" decoding="async"></div><div class="film-frame"><img src="assets/cover/view-switched.webp" width="480" height="270" alt="" decoding="async"></div><div class="film-frame"><img src="assets/cover/action-observe.webp" width="480" height="270" alt="" decoding="async"></div><div class="film-frame"><img src="assets/cover/action-evidence.webp" width="480" height="270" alt="" decoding="async"></div></div>
+        <div class="filmstrip-group"><div class="film-frame"><img src="assets/cover/visual-masked.webp" width="480" height="270" alt="" decoding="async"></div><div class="film-frame"><img src="assets/cover/visual-revealed.webp" width="480" height="270" alt="" decoding="async"></div><div class="film-frame"><img src="assets/cover/view-initial.webp" width="480" height="270" alt="" decoding="async"></div><div class="film-frame"><img src="assets/cover/view-switched.webp" width="480" height="270" alt="" decoding="async"></div><div class="film-frame"><img src="assets/cover/action-observe.webp" width="480" height="270" alt="" decoding="async"></div><div class="film-frame"><img src="assets/cover/action-evidence.webp" width="480" height="270" alt="" decoding="async"></div></div>
+      </div></div>
+      <div class="filmstrip filmstrip-2"><div class="filmstrip-track">
+        <div class="filmstrip-group"><div class="film-frame"><img src="assets/cover/concept-ask.webp" width="480" height="270" alt="" decoding="async"></div><div class="film-frame"><img src="assets/cover/concept-evidence.webp" width="480" height="270" alt="" decoding="async"></div><div class="film-frame"><img src="assets/cover/intent-ask.webp" width="480" height="270" alt="" decoding="async"></div><div class="film-frame"><img src="assets/cover/intent-answer.webp" width="480" height="270" alt="" decoding="async"></div><div class="film-frame"><img src="assets/cover/premise-observe.webp" width="480" height="270" alt="" decoding="async"></div><div class="film-frame"><img src="assets/cover/premise-answer.webp" width="480" height="270" alt="" decoding="async"></div></div>
+        <div class="filmstrip-group"><div class="film-frame"><img src="assets/cover/concept-ask.webp" width="480" height="270" alt="" decoding="async"></div><div class="film-frame"><img src="assets/cover/concept-evidence.webp" width="480" height="270" alt="" decoding="async"></div><div class="film-frame"><img src="assets/cover/intent-ask.webp" width="480" height="270" alt="" decoding="async"></div><div class="film-frame"><img src="assets/cover/intent-answer.webp" width="480" height="270" alt="" decoding="async"></div><div class="film-frame"><img src="assets/cover/premise-observe.webp" width="480" height="270" alt="" decoding="async"></div><div class="film-frame"><img src="assets/cover/premise-answer.webp" width="480" height="270" alt="" decoding="async"></div></div>
+      </div></div>
+      <div class="filmstrip filmstrip-3"><div class="filmstrip-track">
+        <div class="filmstrip-group"><div class="film-frame"><img src="assets/cover/preference-ask.webp" width="480" height="270" alt="" decoding="async"></div><div class="film-frame"><img src="assets/cover/preference-answer.webp" width="480" height="270" alt="" decoding="async"></div><div class="film-frame"><img src="assets/cover/preference-old.webp" width="480" height="270" alt="" decoding="async"></div><div class="film-frame"><img src="assets/cover/preference-updated.webp" width="480" height="270" alt="" decoding="async"></div><div class="film-frame"><img src="assets/cover/view-initial.webp" width="480" height="270" alt="" decoding="async"></div><div class="film-frame"><img src="assets/cover/visual-revealed.webp" width="480" height="270" alt="" decoding="async"></div></div>
+        <div class="filmstrip-group"><div class="film-frame"><img src="assets/cover/preference-ask.webp" width="480" height="270" alt="" decoding="async"></div><div class="film-frame"><img src="assets/cover/preference-answer.webp" width="480" height="270" alt="" decoding="async"></div><div class="film-frame"><img src="assets/cover/preference-old.webp" width="480" height="270" alt="" decoding="async"></div><div class="film-frame"><img src="assets/cover/preference-updated.webp" width="480" height="270" alt="" decoding="async"></div><div class="film-frame"><img src="assets/cover/view-initial.webp" width="480" height="270" alt="" decoding="async"></div><div class="film-frame"><img src="assets/cover/visual-revealed.webp" width="480" height="270" alt="" decoding="async"></div></div>
+      </div></div>
+    </div>
+    <div class="cover-shade" aria-hidden="true"></div>
+
     <div class="cover-content">
       <p class="cover-name">AskStream</p>
       <p class="cover-title">When and What to Ask Proactively<br>under Uncertainty in Streaming Video Understanding</p>
     </div>
     <a class="learn-more" href="#paper"><span>Learn More</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+    <button class="cover-motion" id="cover-motion" type="button" aria-pressed="false" aria-label="Pause cover animation"><span class="motion-symbol" aria-hidden="true">Ⅱ</span><span class="motion-text">Pause motion</span></button>
   </header>
   <main>
     <section class="paper-header section" id="paper" aria-labelledby="paper-title">
       <div class="container narrow">
         <h1 id="paper-title">AskStream: When and What to Ask Proactively under Uncertainty in Streaming Video Understanding</h1>
         <div class="authors">
-          <span><a href="mailto:wanglu2026@ia.ac.cn">Lu Wang</a><sup>1,2</sup>,</span>
-          <span>Zhuoran Jin<sup>1</sup>,</span>
-          <span>Longxiang Wang<sup>1</sup>,</span>
+          <span><a href="https://wanglu-cs.github.io/" target="_blank" rel="noopener">Lu Wang</a><sup>1,2</sup>,</span>
+          <span><a href="https://jinzhuoran.github.io/" target="_blank" rel="noopener">Zhuoran Jin</a><sup>1</sup>,</span>
+          <span><a href="https://openreview.net/profile?id=~Longxiang_Wang3" target="_blank" rel="noopener">Longxiang Wang</a><sup>1</sup>,</span>
           <span>Junhong Chen<sup>1</sup>,</span>
-          <span>Yupu Hao<sup>1</sup>,</span>
-          <span>Yao Xu<sup>2</sup>,</span>
-          <span>Daojian Zeng<sup>3</sup>,</span>
-          <span>Yubo Chen<sup>4</sup>,</span>
-          <span>Kang Liu<sup>1</sup>,</span>
+          <span><a href="https://openreview.net/profile?id=~Yupu_Hao1" target="_blank" rel="noopener">Yupu Hao</a><sup>1</sup>,</span>
+          <span><a href="https://openreview.net/profile?id=~Yao_Xu3" target="_blank" rel="noopener">Yao Xu</a><sup>2</sup>,</span>
+          <span><a href="https://openreview.net/profile?id=~Daojian_Zeng1" target="_blank" rel="noopener">Daojian Zeng</a><sup>3</sup>,</span>
+          <span><a href="https://openreview.net/profile?id=~Yubo_Chen1" target="_blank" rel="noopener">Yubo Chen</a><sup>4</sup>,</span>
+          <span><a href="https://openreview.net/profile?id=~Kang_Liu1" target="_blank" rel="noopener">Kang Liu</a><sup>1</sup>,</span>
           <span>Guang Liu<sup>2</sup>,</span>
-          <span>Jun Zhao<sup>1</sup></span>
+          <span><a href="https://zhaojun-nlpr.github.io/" target="_blank" rel="noopener">Jun Zhao</a><sup>1</sup></span>
         </div>
         <div class="affiliations">
           <p><sup>1</sup>The Key Laboratory of Cognition and Decision Intelligence for Complex Systems,<br class="desktop-break"> Institute of Automation, Chinese Academy of Sciences, Beijing, China</p>

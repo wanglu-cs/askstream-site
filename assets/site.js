@@ -119,5 +119,22 @@ document.querySelector('#copy-citation').addEventListener('click', async () => {
 const backToTop = document.querySelector('.back-to-top');
 const coverObserver = new IntersectionObserver(entries => {
   backToTop.hidden = entries[0].isIntersecting;
+  document.querySelector('.cover').classList.toggle('is-offscreen', !entries[0].isIntersecting);
 });
 coverObserver.observe(document.querySelector('.cover'));
+
+
+// Visitors can pause the decorative motion; offscreen tabs and reduced-motion
+// preferences stop it as well.
+const cover = document.querySelector('.cover');
+const coverMotion = document.querySelector('#cover-motion');
+coverMotion.addEventListener('click', () => {
+  const paused = cover.classList.toggle('motion-paused');
+  coverMotion.setAttribute('aria-pressed', String(paused));
+  coverMotion.setAttribute('aria-label', paused ? 'Resume cover animation' : 'Pause cover animation');
+  coverMotion.querySelector('.motion-symbol').textContent = paused ? '▷' : 'Ⅱ';
+  coverMotion.querySelector('.motion-text').textContent = paused ? 'Resume motion' : 'Pause motion';
+});
+document.addEventListener('visibilitychange', () => {
+  cover.classList.toggle('is-offscreen', document.hidden || cover.getBoundingClientRect().bottom <= 0);
+});

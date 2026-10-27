@@ -22,7 +22,11 @@ Open <http://localhost:8000/>. No build step or JavaScript dependencies are requ
 - `assets/fonts/`: Dancing Script and Noto Sans with their SIL Open Font Licenses.
 - `.nojekyll`: disables Jekyll processing on GitHub Pages.
 
-The cover intentionally has a plain dark background until a project background image is available. To add one, set `background-image` on `.cover` in `assets/style.css`.
+The cover displays animated filmstrips made from the supplied real screenshots in `assets/video/`, corresponding to the paper's A.9 study cases. The frames are optimized WebP assets in `assets/cover/`; originals remain unchanged. No image-generation API is used. Visitors can pause the motion; reduced-motion preferences disable it, and animation pauses when the cover is offscreen.
+
+The supplied `assets/icon.png` remains as source material; the page uses a text wordmark and the simple letter favicon. To rebuild cover frames after changing source materials, install Pillow and run `python3 scripts/build_cover_assets.py`.
+
+Paper figures use transparent CSS backgrounds so their existing PNG transparency is preserved. Styles and scripts include a version query to refresh cached copies after this update.
 
 Example videos are intentionally left as labeled placeholders in `#example-video` and `#example-user`. Replace each `.media-placeholder` with a `<video controls playsinline preload="metadata">` element when the corresponding video is ready. Do not reuse demo media from the reference website.
 
