@@ -294,11 +294,57 @@ window.ASKSTREAM_EXAMPLES = [
         "id": "ICM_000006_turn_000001",
         "start": 0,
         "end": 120.833,
-        "ask": 91,
+        "ask": 0,
         "askEnd": 100.5,
         "answer": 100.5,
         "answerEnd": 120.833,
         "windows": {
+          "waiting": {
+            "start_s": 0,
+            "end_s": 0,
+            "start_frame": 0,
+            "end_frame": 0
+          },
+          "asking": {
+            "start_s": 0,
+            "end_s": 100.5,
+            "start_frame": 0,
+            "end_frame": 2412
+          },
+          "answering": {
+            "start_s": 100.5,
+            "end_s": 120.833,
+            "start_frame": 2412,
+            "end_frame": 2900
+          }
+        },
+        "query": "When {Edgar} is riding a horse as it gallops across the grassy slope, tell me what color this horse is?",
+        "actionOptions": [],
+        "answerOptions": [
+          "Black",
+          "Pink",
+          "White",
+          "Yellow"
+        ],
+        "correctAction": null,
+        "correctActions": [],
+        "correctAnswer": 0,
+        "answerMode": "choice",
+        "referenceAnswer": null,
+        "userReply": "[CONCEPT DEFINITION 1/1]\nAlias: {Edgar}\nOriginal definition question:\nThis character is my friend, named {Edgar}. Please remember this name. From now on, regardless of who this character might be in real life or in any media, you must refer to them as {Edgar}.",
+        "historicalPreference": null,
+        "videoSrc": "assets/examples/icm/video.mp4",
+        "evidence": [
+          {
+            "kind": "image",
+            "src": "assets/examples/icm/evidence-turn_000001-image_001.jpg.webp",
+            "synchronized": false,
+            "label": "Concept definition image"
+          }
+        ],
+        "actionMode": "open",
+        "referenceAsk": "Please provide the personalized entity definition for {Edgar}.",
+        "sourceWindows": {
           "waiting": {
             "start_s": 0,
             "end_s": 91,
@@ -318,37 +364,6 @@ window.ASKSTREAM_EXAMPLES = [
             "end_frame": 2900
           }
         },
-        "query": "When {Edgar} is riding a horse as it gallops across the grassy slope, tell me what color this horse is?",
-        "actionOptions": [
-          "Is it true that the character with slim young human with tan skin, spiky dark-brown hair, dark eyebrows, and brown eyes is {Edgar}?",
-          "Is it true that the character with slim young human with tan skin, straight pale-blond hair, dark eyebrows, and brown eyes is {Edgar}?",
-          "Is it true that the character with slim young human with tan skin, spiky pale-blond hair, dark eyebrows, and brown eyes is {Edgar}?",
-          "Is it true that the character with slim young human with pale skin, spiky pale-blond hair, dark eyebrows, and brown eyes is {Edgar}?"
-        ],
-        "answerOptions": [
-          "Black",
-          "Pink",
-          "White",
-          "Yellow"
-        ],
-        "correctAction": 2,
-        "correctActions": [
-          2
-        ],
-        "correctAnswer": 0,
-        "answerMode": "choice",
-        "referenceAnswer": null,
-        "userReply": "[CONCEPT DEFINITION 1/1]\nAlias: {Edgar}\nOriginal definition question:\nThis character is my friend, named {Edgar}. Please remember this name. From now on, regardless of who this character might be in real life or in any media, you must refer to them as {Edgar}.",
-        "historicalPreference": null,
-        "videoSrc": "assets/examples/icm/video.mp4",
-        "evidence": [
-          {
-            "kind": "image",
-            "src": "assets/examples/icm/evidence-turn_000001-image_001.jpg.webp",
-            "synchronized": false,
-            "label": "Concept definition image"
-          }
-        ],
         "answerImages": []
       }
     ],

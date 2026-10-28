@@ -194,9 +194,9 @@ figure{margin:32px 0 0;text-align:center}figure img{max-width:100%;width:100%;he
 .conditional-answer{font-size:10px;line-height:1.4;align-self:center;text-align:center;color:#527965}
 .option-image{width:88px;height:104px;object-fit:contain;flex-shrink:0;margin-left:auto;background:#f6f3f8;border-radius:4px}
 .option-choice .option-text{flex:1;min-width:0}
-#answer-tab-label{font:inherit;background:none;padding:0;color:inherit}
-#open-answer{width:100%;resize:vertical;font:inherit;font-size:14px;padding:12px;border:1px solid #cfc3d9;border-radius:7px}
-#option-list>label[for=open-answer]{font-size:13px;color:#74607f}
+#answer-tab-label,#action-tab-label{font:inherit;background:none;padding:0;color:inherit}
+#open-answer,#open-question{width:100%;resize:vertical;font:inherit;font-size:14px;padding:12px;border:1px solid #cfc3d9;border-radius:7px}
+#option-list>label[for=open-answer],#option-list>label[for=open-question]{font-size:13px;color:#74607f}
 #preference-text{font-size:13px;line-height:1.8;white-space:pre-line;margin-top:8px}
 #reference-reply,#reference-ask{white-space:pre-line}
 .evidence-panel{margin:24px 0 0;border:1px solid #dbe9df;background:#f5f9f6;padding:20px;border-radius:10px}

@@ -67,13 +67,22 @@ def export(dataset):
                     sourceUrl=case['source'].get('url'), videoSrc=main, duration=duration,
                     sourceDuration=case['media']['duration_s'], simulated=False, turns=[])
         for t in turns:
-            ask, answer = t['windows']['asking'], t['windows']['answering']
+            windows = t['windows']
+            if code == 'ICM':
+                # EventSpec.effective_asking uses a zero-length initial WAIT for
+                # open ASK: aliases in the question can be requested immediately.
+                start = t['query_time_s']
+                frame = (windows['waiting'] or windows['asking'])['start_frame']
+                windows = {**windows,
+                           'waiting': {'start_s':start, 'end_s':start, 'start_frame':frame, 'end_frame':frame},
+                           'asking': {**windows['asking'], 'start_s':start, 'start_frame':frame}}
+            ask, answer = windows['asking'], windows['answering']
             correct_actions = [i for i,o in enumerate(t['ask']['options']) if o['option_id'] in t['ask']['correct_option_ids']]
             correct_answer = next((i for i,o in enumerate(t['answer']['options']) if o['option_id'] == t['answer']['correct_option_id']), None)
             initial = views.get(t['metadata']['evaluation']['initial_view_id'], case['media']['uri'])
             turn = dict(id=t['turn_id'], start=t['query_time_s'], end=min(t['time_range']['end_s'],duration),
                         ask=ask['start_s'], askEnd=ask['end_s'], answer=answer['start_s'] if answer else None,
-                        answerEnd=answer['end_s'] if answer else None, windows=t['windows'], query=t['query']['text'],
+                        answerEnd=answer['end_s'] if answer else None, windows=windows, query=t['query']['text'],
                         actionOptions=[o['text'] for o in t['ask']['options']],
                         answerOptions=[o['text'] for o in t['answer']['options']],
                         correctAction=correct_actions[0], correctActions=correct_actions, correctAnswer=correct_answer,
@@ -81,6 +90,10 @@ def export(dataset):
                         userReply='\n\n'.join(e['content'] for e in t['evidence']['text']),
                         historicalPreference=t['metadata']['evaluation'].get('historical_preference'),
                         videoSrc=video(code, initial, duration), evidence=[])
+            if code == 'ICM':
+                turn.update(actionMode='open', referenceAsk=t['ask']['reference_text'],
+                            actionOptions=[], correctActions=[], correctAction=None,
+                            sourceWindows=t['windows'])
             for e in t['evidence']['visual']:
                 paths = e['uris']
                 if e['kind'] == 'synchronized_view':
@@ -113,6 +126,11 @@ def export(dataset):
                                       **{k:{field:value for field,value in t[k].items() if field != 'judge'} for k in ['ask','answer']},
                                       'historical_preference':t['metadata']['evaluation'].get('historical_preference')}
                                      for t in turns]})
+        if code == 'ICM':
+            annotations[-1]['website_protocol'] = {
+                'ask_mode':'open',
+                'rule':'ICM open ASK is available at query activation, using zero-length initial WAIT. Answer windows are unchanged.',
+                'turns':[{'turn_id':t['id'], 'windows':t['windows'], 'reference_ask':t['referenceAsk']} for t in item['turns']]}
 
     def encode(job):
         source, target, duration = job
@@ -130,7 +148,9 @@ def export(dataset):
     with ThreadPoolExecutor(max_workers=3) as pool:
         list(pool.map(encode, media_jobs.values()))
     for item in examples:
-        run(['ffmpeg','-v','error','-y','-ss',str(item['turns'][0]['ask']+0.5),'-i',str(ROOT/item['videoSrc']),
+        first_turn = item['turns'][0]
+        poster_time = first_turn.get('sourceWindows', first_turn['windows'])['asking']['start_s'] + 0.5
+        run(['ffmpeg','-v','error','-y','-ss',str(poster_time),'-i',str(ROOT/item['videoSrc']),
              '-frames:v','1','-threads','1',str(ROOT/item['poster'])])
     (ROOT/'assets/examples-data.js').write_text('// Generated from reviewed benchmark annotations by scripts/build_examples.py.\nwindow.ASKSTREAM_EXAMPLES = '+json.dumps(examples,ensure_ascii=False,indent=2)+';\n')
     (OUT/'annotations.json').write_text(json.dumps(annotations,ensure_ascii=False,indent=2)+'\n')

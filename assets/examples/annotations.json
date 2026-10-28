@@ -641,7 +641,37 @@
         },
         "historical_preference": null
       }
-    ]
+    ],
+    "website_protocol": {
+      "ask_mode": "open",
+      "rule": "ICM open ASK is available at query activation, using zero-length initial WAIT. Answer windows are unchanged.",
+      "turns": [
+        {
+          "turn_id": "ICM_000006_turn_000001",
+          "windows": {
+            "waiting": {
+              "start_s": 0,
+              "end_s": 0,
+              "start_frame": 0,
+              "end_frame": 0
+            },
+            "asking": {
+              "start_s": 0,
+              "end_s": 100.5,
+              "start_frame": 0,
+              "end_frame": 2412
+            },
+            "answering": {
+              "start_s": 100.5,
+              "end_s": 120.833,
+              "start_frame": 2412,
+              "end_frame": 2900
+            }
+          },
+          "reference_ask": "Please provide the personalized entity definition for {Edgar}."
+        }
+      ]
+    }
   },
   {
     "case_id": "PACM_000001",

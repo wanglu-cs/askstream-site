@@ -9,6 +9,7 @@
   let referenceVisible = false;
   const choices = new Map();
   const writtenAnswers = new Map();
+  const writtenQuestions = new Map();
   let loadingVideo = false;
   let resumeAfterLoad = false;
   const find = selector => document.querySelector(selector);
@@ -128,6 +129,7 @@
 
   function renderOptions() {
     const turn = activeTurn();
+    const openQuestion = optionType === 'action' && turn.actionMode === 'open';
     const options = optionType === 'action' ? turn.actionOptions : turn.answerOptions;
     const correct = optionType === 'action' ? turn.correctActions : [turn.correctAnswer];
     const list = find('#option-list');
@@ -170,15 +172,17 @@
       }
       list.append(label);
     });
-    if (optionType === 'answer' && turn.answerMode === 'open') {
+    if (openQuestion || (optionType === 'answer' && turn.answerMode === 'open')) {
+      const responses = openQuestion ? writtenQuestions : writtenAnswers;
+      const fieldId = openQuestion ? 'open-question' : 'open-answer';
       const label = document.createElement('label');
-      label.textContent = 'Write the reminder you would give.';
-      label.htmlFor = 'open-answer';
+      label.textContent = openQuestion ? 'Ask for the personalized definitions needed to answer the query.' : 'Write the reminder you would give.';
+      label.htmlFor = fieldId;
       const input = document.createElement('textarea');
-      input.id = 'open-answer';
+      input.id = fieldId;
       input.rows = 3;
-      input.value = writtenAnswers.get(turn.id) || '';
-      input.addEventListener('input', () => writtenAnswers.set(turn.id, input.value));
+      input.value = responses.get(turn.id) || '';
+      input.addEventListener('input', () => responses.set(turn.id, input.value));
       list.append(label, input);
     }
     document.querySelectorAll('[data-option-type]').forEach(tab => {
@@ -187,7 +191,8 @@
       tab.tabIndex = active ? 0 : -1;
     });
     find('#options-panel').setAttribute('aria-labelledby', `${optionType}-options-tab`);
-    find('#action-option-count').textContent = turn.actionOptions.length;
+    find('#action-option-count').textContent = turn.actionMode === 'open' ? 'Open' : turn.actionOptions.length;
+    find('#action-tab-label').textContent = turn.actionMode === 'open' ? 'Your question' : 'Action options';
     find('#answer-option-count').textContent = turn.answerMode === 'open' ? 'Open' : turn.answerOptions.length;
     find('#answer-tab-label').textContent = turn.answerMode === 'open' ? 'Your answer' : 'Answer options';
   }
@@ -260,11 +265,13 @@
     const turn = activeTurn();
     find('#round-query').textContent = turn.query;
     find('#query-turn-label').textContent = `Turn ${turnIndex + 1} · ${timeText(turn.start)}`;
-    find('#reference-ask').textContent = turn.correctActions.map(index => turn.actionOptions[index]).join('\nOR\n');
+    find('#reference-ask').textContent = turn.actionMode === 'open' ? turn.referenceAsk : turn.correctActions.map(index => turn.actionOptions[index]).join('\nOR\n');
     find('#reference-answer').textContent = turn.answerMode === 'open' ? turn.referenceAnswer : turn.answerOptions[turn.correctAnswer];
     find('#historical-preference').hidden = !turn.historicalPreference;
     find('#preference-text').textContent = turn.historicalPreference || '';
-    find('#timing-note').textContent = turn.answer === null
+    find('#timing-note').textContent = turn.actionMode === 'open'
+      ? 'Ask for the concept definition as soon as the query appears. After receiving it, wait for the event in the video before answering.'
+      : turn.answer === null
       ? 'Within this ASK window, answering becomes valid one evaluation tick after a correct question receives its reply. There is no fixed ANSWER timestamp.'
       : 'Colored windows are the original annotations. ASK marks an eligible interval, not a recorded model action. Answer after receiving the reply and reaching the ANSWER window.';
     find('#reference-panel').hidden = !referenceVisible;
