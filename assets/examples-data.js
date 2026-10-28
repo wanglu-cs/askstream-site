@@ -69,7 +69,8 @@ window.ASKSTREAM_EXAMPLES = [
           {
             "kind": "video",
             "src": "assets/examples/kvem/evidence-reveal.mp4",
-            "synchronized": true
+            "synchronized": true,
+            "label": "Revealed video"
           }
         ],
         "answerImages": []
@@ -128,7 +129,8 @@ window.ASKSTREAM_EXAMPLES = [
           {
             "kind": "video",
             "src": "assets/examples/kvem/evidence-reveal.mp4",
-            "synchronized": true
+            "synchronized": true,
+            "label": "Revealed video"
           }
         ],
         "answerImages": []
@@ -202,12 +204,14 @@ window.ASKSTREAM_EXAMPLES = [
           {
             "kind": "video",
             "src": "assets/examples/vim/views-view_003.mp4",
-            "synchronized": true
+            "synchronized": true,
+            "label": "Gold view · cam02/0"
           },
           {
             "kind": "video",
             "src": "assets/examples/vim/views-view_004.mp4",
-            "synchronized": true
+            "synchronized": true,
+            "label": "Gold view · cam03/0"
           }
         ],
         "answerImages": []
@@ -262,7 +266,8 @@ window.ASKSTREAM_EXAMPLES = [
           {
             "kind": "video",
             "src": "assets/examples/vim/views-view_002.mp4",
-            "synchronized": true
+            "synchronized": true,
+            "label": "Gold view · cam01/0"
           }
         ],
         "answerImages": []
@@ -340,7 +345,8 @@ window.ASKSTREAM_EXAMPLES = [
           {
             "kind": "image",
             "src": "assets/examples/icm/evidence-turn_000001-image_001.jpg.webp",
-            "synchronized": false
+            "synchronized": false,
+            "label": "Concept definition image"
           }
         ],
         "answerImages": []
@@ -413,7 +419,8 @@ window.ASKSTREAM_EXAMPLES = [
           {
             "kind": "video",
             "src": "assets/examples/pacm/evidence-turn_000001-video.mp4",
-            "synchronized": false
+            "synchronized": false,
+            "label": "Action definition video"
           }
         ],
         "answerImages": []

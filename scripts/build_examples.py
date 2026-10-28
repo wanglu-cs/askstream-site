@@ -91,7 +91,14 @@ def export(dataset):
                     sync = e['timebase'] == 'absolute'
                     media_duration = duration if sync else None
                     asset = picture(code,uri) if is_image else video(code,uri,media_duration)
-                    turn['evidence'].append({'kind': 'image' if is_image else 'video', 'src':asset, 'synchronized':sync})
+                    if code == 'VIM':
+                        view_id = next(view_id for view_id,path in views.items() if path == uri)
+                        label = f'Gold view · {view_id}'
+                    else:
+                        label = {'KVEM':'Revealed video', 'ICM':'Concept definition image',
+                                 'PACM':'Action definition video'}[code]
+                    turn['evidence'].append({'kind': 'image' if is_image else 'video', 'src':asset,
+                                             'synchronized':sync, 'label':label})
             turn['answerImages'] = [picture(code,p) for p in t['metadata']['source_metadata'].get('option_images',[])]
             item['turns'].append(turn)
         poster = OUT/code.lower()/'poster.jpg'

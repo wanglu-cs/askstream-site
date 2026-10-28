@@ -195,22 +195,39 @@
   function clearEvidence() {
     find('#evidence-media').querySelectorAll('video').forEach(media => media.pause());
     find('#evidence-media').replaceChildren();
-    find('#evidence-panel').hidden = true;
   }
 
   function renderEvidence() {
-    clearEvidence();
     const turn = activeTurn();
-    if (!referenceVisible || !turn.evidence.length) return;
-    find('#evidence-panel').hidden = false;
-    find('#evidence-note').textContent = turn.evidence.some(e => e.synchronized)
-      ? 'The annotated clear view or camera view. Evidence follows the main timeline during playback; its controls also allow independent inspection.'
-      : 'The original concept definition supplied in response to the correct question.';
+    const panel = find('#evidence-panel');
+    // Revealing reference answers must not reset or hide the evidence players.
+    if (panel.dataset.turnId === turn.id) return;
+    clearEvidence();
+    panel.dataset.turnId = turn.id;
+    const code = activeCase().code;
+    const titles = {KVEM: 'Revealed video', VIM: 'All gold views',
+      PACM: 'Action definition', ICM: 'Concept definition'};
+    const notes = {
+      KVEM: 'The requested region is revealed in this video. Other annotated masks remain in place.',
+      VIM: 'Every camera accepted as a gold view for this turn is shown below.',
+      PACM: 'Watch the original demonstration that defines the personalized action.',
+      ICM: 'The task image and user-provided definition establish the personalized concept.',
+      AUQ: 'The user clarifies the intended subject and reminder.',
+      WUQ: 'The user confirms the corrected premise and question.',
+      UPM: 'The user supplies the missing preference.',
+      UPC: 'The user supplies the current preference that replaces the earlier one.'
+    };
+    find('#evidence-title').textContent = `Evidence · ${titles[code] || 'User reply'}`;
+    find('#evidence-turn-label').textContent = `Turn ${turnIndex + 1}`;
+    find('#evidence-note').textContent = notes[code];
+    find('#evidence-reply').hidden = !turn.userReply;
+    find('#evidence-reply-label').textContent = code === 'ICM' ? 'Concept definition' : 'User reply';
+    find('#evidence-reply-text').textContent = turn.userReply;
     turn.evidence.forEach((item, index) => {
       const figure = document.createElement('figure');
       const media = document.createElement(item.kind === 'image' ? 'img' : 'video');
       media.src = item.src;
-      const label = `Reference evidence ${index + 1} for ${activeCase().code}, turn ${turnIndex + 1}`;
+      const label = `${item.label} for ${code}, turn ${turnIndex + 1}`;
       if (item.kind === 'image') media.alt = label;
       else {
         media.controls = true;
@@ -223,7 +240,9 @@
           media.currentTime = Math.min(media.duration - 0.05, Math.max(turn.ask + 0.5, currentTime));
         }, {once: true});
       }
-      figure.append(media);
+      const caption = document.createElement('figcaption');
+      caption.textContent = item.label;
+      figure.append(media, caption);
       find('#evidence-media').append(figure);
     });
   }
@@ -242,8 +261,6 @@
     find('#round-query').textContent = turn.query;
     find('#query-turn-label').textContent = `Turn ${turnIndex + 1} · ${timeText(turn.start)}`;
     find('#reference-ask').textContent = turn.correctActions.map(index => turn.actionOptions[index]).join('\nOR\n');
-    find('#reference-reply-label').textContent = turn.userReply ? 'USER REPLY' : 'VISUAL EVIDENCE';
-    find('#reference-reply').textContent = turn.userReply || 'The annotated visual response is shown below.';
     find('#reference-answer').textContent = turn.answerMode === 'open' ? turn.referenceAnswer : turn.answerOptions[turn.correctAnswer];
     find('#historical-preference').hidden = !turn.historicalPreference;
     find('#preference-text').textContent = turn.historicalPreference || '';
