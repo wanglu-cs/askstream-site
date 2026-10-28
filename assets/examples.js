@@ -8,10 +8,16 @@
   let currentTime = 0;
   let referenceVisible = false;
   const choices = new Map();
+  const writtenAnswers = new Map();
+  let loadingVideo = false;
+  let resumeAfterLoad = false;
   const find = selector => document.querySelector(selector);
   const video = find('#case-video');
   const scrubber = find('#case-scrubber');
-  const timeText = value => `${String(Math.floor(value / 60)).padStart(2, '0')}:${String(Math.floor(value % 60)).padStart(2, '0')}`;
+  const timeText = value => {
+    const ticks = Math.round(value * 100);
+    return `${String(Math.floor(ticks / 6000)).padStart(2, '0')}:${((ticks % 6000) / 100).toFixed(2).padStart(5, '0')}`;
+  };
   const activeCase = () => cases[caseIndex];
   const activeTurn = () => activeCase().turns[turnIndex];
   const selectionKey = () => `${activeTurn().id}-${optionType}`;
@@ -70,12 +76,9 @@
     windows.replaceChildren();
     markers.replaceChildren();
     item.turns.forEach((turn, index) => {
-      const intervals = [
-        ['wait', turn.start, turn.ask],
-        ['ask', turn.ask, turn.askEnd],
-        ['wait', turn.askEnd, turn.answer],
-        ['answer', turn.answer, turn.end]
-      ];
+      const intervals = Object.entries(turn.windows).filter(([, value]) => value).map(([phase, value]) => [
+        {waiting: 'wait', asking: 'ask', answering: 'answer'}[phase], value.start_s, value.end_s
+      ]);
       intervals.forEach(([phase, start, end]) => {
         if (end <= start) return;
         const windowButton = button('', () => seek(start), `timeline-window ${phase}-window`);
@@ -93,7 +96,9 @@
       label.className = 'timestamp-turn';
       label.textContent = `T${index + 1}`;
       group.append(label);
-      [['Query', turn.start], ['Ask', turn.ask], ['Answer', turn.answer]].forEach(([kind, time]) => {
+      const timestamps = [['Query', turn.start], ['Ask', turn.ask]];
+      if (turn.answer !== null) timestamps.push(['Answer', turn.answer]);
+      timestamps.forEach(([kind, time]) => {
         const marker = button('', () => seek(time), `timestamp-button timestamp-${kind.toLowerCase()}`);
         const text = document.createElement('span');
         text.textContent = kind;
@@ -104,6 +109,12 @@
         marker.setAttribute('aria-label', `Turn ${index + 1} ${kind} at ${timeText(time)}`);
         group.append(marker);
       });
+      if (turn.answer === null) {
+        const note = document.createElement('span');
+        note.className = 'conditional-answer';
+        note.textContent = 'Answer after reply';
+        group.append(note);
+      }
       markers.append(group);
     });
     const playhead = document.createElement('div');
@@ -111,13 +122,14 @@
     playhead.setAttribute('aria-hidden', 'true');
     windows.append(playhead);
     scrubber.max = item.duration;
+    markers.style.gridTemplateColumns = `repeat(${Math.min(item.turns.length, 3)}, minmax(0, 1fr))`;
     find('#total-time').textContent = timeText(item.duration);
   }
 
   function renderOptions() {
     const turn = activeTurn();
     const options = optionType === 'action' ? turn.actionOptions : turn.answerOptions;
-    const correct = optionType === 'action' ? turn.correctAction : turn.correctAnswer;
+    const correct = optionType === 'action' ? turn.correctActions : [turn.correctAnswer];
     const list = find('#option-list');
     list.replaceChildren();
     const legend = document.createElement('legend');
@@ -128,7 +140,7 @@
       const label = document.createElement('label');
       label.className = 'option-choice';
       label.classList.toggle('selected', choices.get(selectionKey()) === index);
-      label.classList.toggle('reference-correct', referenceVisible && index === correct);
+      label.classList.toggle('reference-correct', referenceVisible && correct.includes(index));
       const radio = document.createElement('input');
       radio.type = 'radio';
       radio.name = 'example-option';
@@ -148,8 +160,27 @@
       text.className = 'option-text';
       text.textContent = option;
       label.append(radio, letter, text);
+      if (optionType === 'answer' && turn.answerImages[index]) {
+        const img = document.createElement('img');
+        img.src = turn.answerImages[index];
+        img.alt = option;
+        img.loading = 'lazy';
+        img.className = 'option-image';
+        label.append(img);
+      }
       list.append(label);
     });
+    if (optionType === 'answer' && turn.answerMode === 'open') {
+      const label = document.createElement('label');
+      label.textContent = 'Write the reminder you would give.';
+      label.htmlFor = 'open-answer';
+      const input = document.createElement('textarea');
+      input.id = 'open-answer';
+      input.rows = 3;
+      input.value = writtenAnswers.get(turn.id) || '';
+      input.addEventListener('input', () => writtenAnswers.set(turn.id, input.value));
+      list.append(label, input);
+    }
     document.querySelectorAll('[data-option-type]').forEach(tab => {
       const active = tab.dataset.optionType === optionType;
       tab.setAttribute('aria-selected', String(active));
@@ -157,28 +188,84 @@
     });
     find('#options-panel').setAttribute('aria-labelledby', `${optionType}-options-tab`);
     find('#action-option-count').textContent = turn.actionOptions.length;
-    find('#answer-option-count').textContent = turn.answerOptions.length;
+    find('#answer-option-count').textContent = turn.answerMode === 'open' ? 'Open' : turn.answerOptions.length;
+    find('#answer-tab-label').textContent = turn.answerMode === 'open' ? 'Your answer' : 'Answer options';
+  }
+
+  function clearEvidence() {
+    find('#evidence-media').querySelectorAll('video').forEach(media => media.pause());
+    find('#evidence-media').replaceChildren();
+    find('#evidence-panel').hidden = true;
+  }
+
+  function renderEvidence() {
+    clearEvidence();
+    const turn = activeTurn();
+    if (!referenceVisible || !turn.evidence.length) return;
+    find('#evidence-panel').hidden = false;
+    find('#evidence-note').textContent = turn.evidence.some(e => e.synchronized)
+      ? 'The annotated clear view or camera view. Evidence follows the main timeline during playback; its controls also allow independent inspection.'
+      : 'The original concept definition supplied in response to the correct question.';
+    turn.evidence.forEach((item, index) => {
+      const figure = document.createElement('figure');
+      const media = document.createElement(item.kind === 'image' ? 'img' : 'video');
+      media.src = item.src;
+      const label = `Reference evidence ${index + 1} for ${activeCase().code}, turn ${turnIndex + 1}`;
+      if (item.kind === 'image') media.alt = label;
+      else {
+        media.controls = true;
+        media.playsInline = true;
+        media.preload = 'metadata';
+        media.muted = true;
+        media.dataset.synchronized = String(item.synchronized);
+        media.setAttribute('aria-label', label);
+        if (item.synchronized) media.addEventListener('loadedmetadata', () => {
+          media.currentTime = Math.min(media.duration - 0.05, Math.max(turn.ask + 0.5, currentTime));
+        }, {once: true});
+      }
+      figure.append(media);
+      find('#evidence-media').append(figure);
+    });
+  }
+
+  function syncEvidence() {
+    find('#evidence-media').querySelectorAll('video[data-synchronized="true"]').forEach(media => {
+      if (media.readyState > 0 && currentTime >= activeTurn().ask && Math.abs(media.currentTime - currentTime) > 0.5) {
+        media.currentTime = Math.min(currentTime, media.duration - 0.05);
+      }
+      if (!video.paused && media.paused && currentTime >= activeTurn().ask) media.play().catch(() => {});
+    });
   }
 
   function renderAnnotation() {
     const turn = activeTurn();
     find('#round-query').textContent = turn.query;
     find('#query-turn-label').textContent = `Turn ${turnIndex + 1} · ${timeText(turn.start)}`;
-    find('#reference-ask').textContent = turn.actionOptions[turn.correctAction];
-    find('#reference-reply').textContent = turn.userReply;
-    find('#reference-answer').textContent = turn.answerOptions[turn.correctAnswer];
+    find('#reference-ask').textContent = turn.correctActions.map(index => turn.actionOptions[index]).join('\nOR\n');
+    find('#reference-reply-label').textContent = turn.userReply ? 'USER REPLY' : 'VISUAL EVIDENCE';
+    find('#reference-reply').textContent = turn.userReply || 'The annotated visual response is shown below.';
+    find('#reference-answer').textContent = turn.answerMode === 'open' ? turn.referenceAnswer : turn.answerOptions[turn.correctAnswer];
+    find('#historical-preference').hidden = !turn.historicalPreference;
+    find('#preference-text').textContent = turn.historicalPreference || '';
+    find('#timing-note').textContent = turn.answer === null
+      ? 'Within this ASK window, answering becomes valid one evaluation tick after a correct question receives its reply. There is no fixed ANSWER timestamp.'
+      : 'Colored windows are the original annotations. ASK marks an eligible interval, not a recorded model action. Answer after receiving the reply and reaching the ANSWER window.';
     find('#reference-panel').hidden = !referenceVisible;
     find('#toggle-reference').setAttribute('aria-expanded', String(referenceVisible));
     find('#toggle-reference').textContent = referenceVisible ? 'Hide reference' : 'Show reference';
     renderOptions();
+    renderEvidence();
   }
 
   function updateTime() {
     const turn = activeTurn();
     const inTurn = currentTime >= turn.start && currentTime < turn.end;
-    let phase = 'BETWEEN TURNS';
+    let phase = currentTime >= activeCase().duration ? 'END OF EXCERPT' : 'OUTSIDE WINDOWS';
     if (inTurn) {
-      phase = currentTime >= turn.answer ? 'ANSWER' : currentTime >= turn.ask && currentTime < turn.askEnd ? 'ASK' : 'WAIT';
+      const within = interval => interval && currentTime >= interval.start_s && currentTime < interval.end_s;
+      if (within(turn.windows.answering)) phase = 'ANSWER';
+      else if (within(turn.windows.asking)) phase = turn.answer === null ? 'ASK → ANSWER AFTER REPLY' : 'ASK';
+      else if (within(turn.windows.waiting)) phase = 'WAIT';
     }
     scrubber.value = currentTime;
     scrubber.setAttribute('aria-valuetext', `${timeText(currentTime)}, ${phase.toLowerCase()}`);
@@ -191,7 +278,21 @@
       if (Number(marker.dataset.time) === currentTime) marker.setAttribute('aria-current', 'time');
       else marker.removeAttribute('aria-current');
     });
-    find('#example-status').textContent = `${activeCase().code} · Turn ${turnIndex + 1} of ${activeCase().turns.length} · ${timeText(currentTime)} · ${phase.toLowerCase()} · Simulated annotation`;
+    find('#example-status').textContent = `${activeCase().sourceId} · Turn ${turnIndex + 1} of ${activeCase().turns.length} · ${phase.toLowerCase()} · Benchmark annotation`;
+  }
+
+  function loadMainVideo() {
+    const src = activeTurn().videoSrc;
+    if (video.getAttribute('src') === src) return;
+    resumeAfterLoad = !video.paused;
+    loadingVideo = true;
+    video.pause();
+    video.poster = activeCase().poster;
+    video.src = src;
+    video.setAttribute('aria-label', `${activeCase().scene}, turn ${turnIndex + 1}`);
+    find('#video-error').hidden = true;
+    find('#video-download').href = src;
+    video.load();
   }
 
   function seek(time, syncVideo = true) {
@@ -203,9 +304,11 @@
       renderRounds();
       renderTimeline();
       renderAnnotation();
+      loadMainVideo();
     }
     updateTime();
-    if (syncVideo && activeCase().videoSrc && video.readyState > 0) video.currentTime = currentTime;
+    if (syncVideo && !loadingVideo && video.readyState > 0) video.currentTime = currentTime;
+    syncEvidence();
   }
 
   function selectTurn(index) {
@@ -215,6 +318,7 @@
     renderRounds();
     renderTimeline();
     renderAnnotation();
+    loadMainVideo();
     seek(currentTime);
   }
 
@@ -226,26 +330,39 @@
     referenceVisible = false;
     currentTime = activeTurn().start;
     const item = activeCase();
-    video.hidden = !item.videoSrc;
-    find('#case-video-placeholder').hidden = Boolean(item.videoSrc);
-    if (item.videoSrc) video.src = item.videoSrc;
-    else video.removeAttribute('src');
-    video.load();
+    loadMainVideo();
     find('#case-title').textContent = item.title;
     find('#case-category').textContent = `${item.group} / ${item.category}`;
-    find('#case-scene').textContent = item.scene;
+    find('#case-count').textContent = `${item.turns.length} annotated turn${item.turns.length === 1 ? '' : 's'}`;
+    const source = find('#case-source');
+    source.textContent = `${item.scene} · ${item.sourceDataset} · ${item.sourceId} · Source excerpt 00:00–${timeText(item.duration)}`;
+    if (item.sourceUrl) {
+      const link = document.createElement('a');
+      link.href = item.sourceUrl;
+      link.textContent = 'Original source';
+      link.target = '_blank';
+      link.rel = 'noopener';
+      source.append(document.createTextNode(' · '), link);
+    }
     renderCasePicker();
     renderRounds();
     renderTimeline();
     renderAnnotation();
-    updateTime();
+    seek(currentTime);
   }
 
   find('#previous-round').addEventListener('click', () => selectTurn(Math.max(0, turnIndex - 1)));
   find('#next-round').addEventListener('click', () => selectTurn(Math.min(activeCase().turns.length - 1, turnIndex + 1)));
   scrubber.addEventListener('input', event => seek(event.target.value));
-  video.addEventListener('timeupdate', () => seek(video.currentTime, false));
-  video.addEventListener('loadedmetadata', () => { video.currentTime = currentTime; });
+  video.addEventListener('timeupdate', () => { if (!loadingVideo) seek(video.currentTime, false); });
+  video.addEventListener('loadedmetadata', () => {
+    loadingVideo = false;
+    video.currentTime = Math.min(currentTime, video.duration);
+    if (resumeAfterLoad) video.play().catch(() => {});
+    resumeAfterLoad = false;
+  });
+  video.addEventListener('pause', () => find('#evidence-media').querySelectorAll('video').forEach(media => media.pause()));
+  video.addEventListener('error', () => { loadingVideo = false; find('#video-error').hidden = false; });
   document.querySelectorAll('[data-option-type]').forEach(tab => {
     tab.addEventListener('click', () => {
       optionType = tab.dataset.optionType;

@@ -1,0 +1,1922 @@
+[
+  {
+    "case_id": "KVEM_000018",
+    "source": {
+      "dataset": "COIN",
+      "video_id": "DY-5fTFmtUo",
+      "filename": "DY-5fTFmtUo.f313.2160p.30fps.webm",
+      "url": "",
+      "input_filename": "mask_all.mp4"
+    },
+    "annotation_file": "KVEM/KVEM.json",
+    "annotation_sha256": "e30a7b35f360b81e4a926bbb3ec2c29dbc2c141befa7bc492d88fba6c21854b3",
+    "source_duration_s": 40.907533,
+    "excerpt_duration_s": 40.874167,
+    "turns": [
+      {
+        "turn_id": "KVEM_000018_turn_000001",
+        "query": {
+          "text": "When the person starts scooping out the black beans with a spoon, tell me what is in the bowl to the right of the chili pepper at the lower left of the burrito.",
+          "language": "zh-CN"
+        },
+        "query_time_s": 0.0,
+        "time_range": {
+          "start_s": 0.0,
+          "end_s": 19.452767
+        },
+        "windows": {
+          "waiting": {
+            "start_s": 0.0,
+            "end_s": 12.1121,
+            "start_frame": 0,
+            "end_frame": 363
+          },
+          "asking": {
+            "start_s": 12.145467,
+            "end_s": 19.452767,
+            "start_frame": 364,
+            "end_frame": 583
+          },
+          "answering": null
+        },
+        "evidence": {
+          "text": [],
+          "visual": [
+            {
+              "kind": "video",
+              "uris": [
+                "cases/KVEM_000018/evidence/reveal.mp4"
+              ],
+              "timebase": "absolute",
+              "presentation": "replace_stream",
+              "start_s": null
+            }
+          ],
+          "delivery_delay_ticks": 1
+        },
+        "ask": {
+          "mode": "choice",
+          "options": [
+            {
+              "option_id": "act_9211d9bb-bb35-4ea9-b164-1c98ce9e5cb0",
+              "text": "Request a clear view of the object beside the person's wrist and nearest the forearm.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "act_3c55f7d9-4e37-4262-af6b-b91c2315611f",
+              "text": "Request a clear view of the object beyond the person's wrist at the near edge of the dark work area.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "act_b3f44efb-0731-4445-896f-e9858f031889",
+              "text": "Request a clear view of the object at the near edge of the work area, in front of the large round base.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "act_29fb408f-8f62-499b-b921-c59ae9c5cb35",
+              "text": "Request a clear view of the object partially cropped by the screen edge opposite the person's arm.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "act_b49db1a8-e1f5-50f3-b447-0aa99da4f787",
+              "text": "Request a clear view of the object near the top edge of the work area, beyond the large round base.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "act_117a7291-3d16-5227-adc0-8767523cdc15",
+              "text": "Request a clear view of the object centered on the large round base beside the central filling.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "act_089d41ef-f529-5a5b-9bd2-5a04b69ca800",
+              "text": "Request a clear view of the object resting over the person's forearm near the top border.",
+              "entity_ids": [],
+              "target_view_id": null
+            }
+          ],
+          "correct_option_id": "act_b3f44efb-0731-4445-896f-e9858f031889",
+          "correct_option_ids": [
+            "act_b3f44efb-0731-4445-896f-e9858f031889"
+          ],
+          "reference_text": null
+        },
+        "answer": {
+          "mode": "choice",
+          "options": [
+            {
+              "option_id": "ans_2bef23e5-cb3a-5ce0-9d1f-c90fdf41cadc",
+              "text": "lemon wedges",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "ans_7a6860ef-8c34-52c2-9beb-7533b1127a66",
+              "text": "avocado slices",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "ans_f1f6ecf8-8a48-4f25-bb28-08f35ac100b2",
+              "text": "lime wedges",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "ans_885b5800-4cfb-53c7-a711-7f91ce36f6e5",
+              "text": "cucumber wedges",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "ans_ad05455e-df73-5213-8f54-9a4a813bbab1",
+              "text": "green apple slices",
+              "entity_ids": [],
+              "target_view_id": null
+            }
+          ],
+          "correct_option_id": "ans_f1f6ecf8-8a48-4f25-bb28-08f35ac100b2",
+          "reference_text": null
+        },
+        "historical_preference": null
+      },
+      {
+        "turn_id": "KVEM_000018_turn_000002",
+        "query": {
+          "text": "When the man starts putting white cheese on the burrito, tell me what is in the bowl surrounded by chili peppers in the lower-right corner of the frame.",
+          "language": "zh-CN"
+        },
+        "query_time_s": 19.486133,
+        "time_range": {
+          "start_s": 19.486133,
+          "end_s": 40.874167
+        },
+        "windows": {
+          "waiting": {
+            "start_s": 19.486133,
+            "end_s": 29.8298,
+            "start_frame": 584,
+            "end_frame": 894
+          },
+          "asking": {
+            "start_s": 29.863167,
+            "end_s": 40.874167,
+            "start_frame": 895,
+            "end_frame": 1225
+          },
+          "answering": null
+        },
+        "evidence": {
+          "text": [],
+          "visual": [
+            {
+              "kind": "video",
+              "uris": [
+                "cases/KVEM_000018/evidence/reveal.mp4"
+              ],
+              "timebase": "absolute",
+              "presentation": "replace_stream",
+              "start_s": null
+            }
+          ],
+          "delivery_delay_ticks": 1
+        },
+        "ask": {
+          "mode": "choice",
+          "options": [
+            {
+              "option_id": "act_21cac056-8cfe-41d2-9cb6-9ebdd95af8ea",
+              "text": "Request a clear view of the masked item along the outer edge, adjacent to both the white sauce dish and the rice-filled dish.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "act_b876dced-1a23-461e-82a0-c22621730582",
+              "text": "Request a clear view of the masked item along the left edge, between the chip-filled dish and the bean-filled dish.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "act_1f1f744f-94ec-4b6d-8ce4-8db10df5f010",
+              "text": "Request a clear view of the masked item just inside the work area, beside the bean-filled dish and closest to its handle.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "act_084804c2-0a31-4a80-a2f7-1250f4d2cae2",
+              "text": "Request a clear view of the masked item between the bean-filled dish and the red sauce dish, near the wrap's edge.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "act_f093d8c1-05f0-5e1f-a6f0-67156d18cc53",
+              "text": "Request a clear view of the masked item along the top edge, between the chip-filled dish and the man's forearm.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "act_b09c239d-5cb8-5c05-b9c2-ae5565bc8496",
+              "text": "Request a clear view of the masked item between the red sauce dish and the rice-filled dish, near the work area's edge.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "act_64b71d9b-5162-5b0f-9bd6-e6611e36c557",
+              "text": "Request a clear view of the masked item near the center of the wrap, beside the man's wrist and exposed filling.",
+              "entity_ids": [],
+              "target_view_id": null
+            }
+          ],
+          "correct_option_id": "act_21cac056-8cfe-41d2-9cb6-9ebdd95af8ea",
+          "correct_option_ids": [
+            "act_21cac056-8cfe-41d2-9cb6-9ebdd95af8ea"
+          ],
+          "reference_text": null
+        },
+        "answer": {
+          "mode": "choice",
+          "options": [
+            {
+              "option_id": "ans_d1cae2bb-9f6c-56e1-8d4a-eda38100b306",
+              "text": "diced yellow bell peppers",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "ans_65d895ab-fd1e-5fa3-b912-c6b74777ffb4",
+              "text": "chickpeas",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "ans_05fba08b-3d6c-468d-8a17-34e58d49523c",
+              "text": "corn kernels",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "ans_72aac3aa-541f-5e37-9272-e63450114081",
+              "text": "shredded cheddar cheese",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "ans_72f3a978-ce29-5752-8ee6-1821e51dfa1d",
+              "text": "diced mango",
+              "entity_ids": [],
+              "target_view_id": null
+            }
+          ],
+          "correct_option_id": "ans_05fba08b-3d6c-468d-8a17-34e58d49523c",
+          "reference_text": null
+        },
+        "historical_preference": null
+      }
+    ]
+  },
+  {
+    "case_id": "VIM_000022",
+    "source": {
+      "dataset": "EgoExo-4D",
+      "video_id": "5c3e7989-9b64-42dd-af7c-274ce12619bd",
+      "filename": "aria02_214-1.mp4",
+      "url": null,
+      "input_filename": "aria02_214-1.mp4"
+    },
+    "annotation_file": "VIM/VIM.json",
+    "annotation_sha256": "7dcc5c9bffd7031cae0762a3df19220fb42c81904b402eb532252e0fd36d4dac",
+    "source_duration_s": 127.033333,
+    "excerpt_duration_s": 45.0,
+    "turns": [
+      {
+        "turn_id": "VIM_000022_turn_000001",
+        "query": {
+          "text": "When he has lifted that large plastic water jug with both hands from under the table, tell me what is mounted on the wall above the metal-frame folding table with the black backpack on it in this room?",
+          "language": "en"
+        },
+        "query_time_s": 0.0,
+        "time_range": {
+          "start_s": 0.0,
+          "end_s": 27.033333
+        },
+        "windows": {
+          "waiting": {
+            "start_s": 0.0,
+            "end_s": 17.666667,
+            "start_frame": 0,
+            "end_frame": 530
+          },
+          "asking": {
+            "start_s": 17.666667,
+            "end_s": 26.033333,
+            "start_frame": 530,
+            "end_frame": 781
+          },
+          "answering": null
+        },
+        "evidence": {
+          "text": [],
+          "visual": [
+            {
+              "kind": "synchronized_view",
+              "uris": [],
+              "timebase": "absolute",
+              "presentation": "switch_stream",
+              "start_s": null
+            }
+          ],
+          "delivery_delay_ticks": 1
+        },
+        "ask": {
+          "mode": "choice",
+          "options": [
+            {
+              "option_id": "ask_a",
+              "text": "Please give me the view of a downward-facing camera position over the foreground tabletop, with the rear wall and table visible in the background but the upper wall region above that table cut off and outside the field of view.",
+              "entity_ids": [],
+              "target_view_id": "aria02/rgb"
+            },
+            {
+              "option_id": "ask_b",
+              "text": "Please give me the view of the near interior from a fixed diagonal line of sight, with the right-hand wall and floor filling most of the frame, a far opening on the left, and the requested upper-wall region outside the field of view.",
+              "entity_ids": [],
+              "target_view_id": "cam01/0"
+            },
+            {
+              "option_id": "ask_c",
+              "text": "Please give me the view of the fixed camera looking across the room toward the far wall, with the upper-left section of that wall above the midground furnishings clearly visible and unobstructed.",
+              "entity_ids": [],
+              "target_view_id": "cam02/0"
+            },
+            {
+              "option_id": "ask_d",
+              "text": "Please give me the view of the room from a wide position facing the back wall, with the folding table in the right half of the frame and the wall area directly above it clearly visible.",
+              "entity_ids": [],
+              "target_view_id": "cam03/0"
+            }
+          ],
+          "correct_option_id": "ask_c",
+          "correct_option_ids": [
+            "ask_c",
+            "ask_d"
+          ],
+          "reference_text": null
+        },
+        "answer": {
+          "mode": "choice",
+          "options": [
+            {
+              "option_id": "A",
+              "text": "A wall clock",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "B",
+              "text": "An air conditioner",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "C",
+              "text": "A television",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "D",
+              "text": "An electric fan",
+              "entity_ids": [],
+              "target_view_id": null
+            }
+          ],
+          "correct_option_id": "B",
+          "reference_text": null
+        },
+        "historical_preference": null
+      },
+      {
+        "turn_id": "VIM_000022_turn_000002",
+        "query": {
+          "text": "When he has picked up the slender brush from the workbench, tell me what color the board on the wall behind him with two white sheets of paper pinned to it is?",
+          "language": "en"
+        },
+        "query_time_s": 27.033333,
+        "time_range": {
+          "start_s": 27.033333,
+          "end_s": 65.266667
+        },
+        "windows": {
+          "waiting": {
+            "start_s": 27.033333,
+            "end_s": 41.333333,
+            "start_frame": 811,
+            "end_frame": 1240
+          },
+          "asking": {
+            "start_s": 41.333333,
+            "end_s": 45.0,
+            "start_frame": 1240,
+            "end_frame": 1350
+          },
+          "answering": null
+        },
+        "evidence": {
+          "text": [],
+          "visual": [
+            {
+              "kind": "synchronized_view",
+              "uris": [],
+              "timebase": "absolute",
+              "presentation": "switch_stream",
+              "start_s": null
+            }
+          ],
+          "delivery_delay_ticks": 1
+        },
+        "ask": {
+          "mode": "choice",
+          "options": [
+            {
+              "option_id": "ask_a",
+              "text": "Please give me the view of a fixed camera positioned broadly in front of the work area and looking toward the back wall, with the upper central wall region visible beyond the foreground obstruction, the left edge partly occupied by a nearby figure, and the lower central wall area largely occluded.",
+              "entity_ids": [],
+              "target_view_id": "cam01/0"
+            },
+            {
+              "option_id": "ask_b",
+              "text": "Please give me the view of the room from a front-facing camera position, with a wide line of sight toward the interior, where the central wall area is largely occluded by the person and bicycle and only the surrounding wall regions remain visible.",
+              "entity_ids": [],
+              "target_view_id": "cam02/0"
+            },
+            {
+              "option_id": "ask_c",
+              "text": "Please give me the view of the near-left vantage looking diagonally across the space toward the far-right background, with the upper-left wall region reduced to a narrow sliver at the frame edge and mostly outside the field of view.",
+              "entity_ids": [],
+              "target_view_id": "cam03/0"
+            },
+            {
+              "option_id": "ask_d",
+              "text": "Please give me the view of the elevated camera position facing diagonally across the workbench toward the rear wall, with the upper-left wall region behind the person partially occluded and near the top edge of the frame.",
+              "entity_ids": [],
+              "target_view_id": "cam04/0"
+            }
+          ],
+          "correct_option_id": "ask_a",
+          "correct_option_ids": [
+            "ask_a"
+          ],
+          "reference_text": null
+        },
+        "answer": {
+          "mode": "choice",
+          "options": [
+            {
+              "option_id": "A",
+              "text": "Brown",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "B",
+              "text": "Gray",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "C",
+              "text": "Green",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "D",
+              "text": "Blue",
+              "entity_ids": [],
+              "target_view_id": null
+            }
+          ],
+          "correct_option_id": "A",
+          "reference_text": null
+        },
+        "historical_preference": null
+      }
+    ]
+  },
+  {
+    "case_id": "ICM_000006",
+    "source": {
+      "dataset": "PEARL",
+      "video_id": "dayu",
+      "filename": "dayu.mp4",
+      "url": null,
+      "input_filename": "dayu.mp4"
+    },
+    "annotation_file": "ICM/ICM.json",
+    "annotation_sha256": "7c9f3472fdf69d52e3b167a6fb75094c38c35681fffb6df334451bab095b2dda",
+    "source_duration_s": 1384.583333,
+    "excerpt_duration_s": 120.833,
+    "turns": [
+      {
+        "turn_id": "ICM_000006_turn_000001",
+        "query": {
+          "text": "When {Edgar} is riding a horse as it gallops across the grassy slope, tell me what color this horse is?",
+          "language": "en"
+        },
+        "query_time_s": 0,
+        "time_range": {
+          "start_s": 0,
+          "end_s": 197
+        },
+        "windows": {
+          "waiting": {
+            "start_s": 0,
+            "end_s": 91,
+            "start_frame": 0,
+            "end_frame": 2184
+          },
+          "asking": {
+            "start_s": 91,
+            "end_s": 100.5,
+            "start_frame": 2184,
+            "end_frame": 2412
+          },
+          "answering": {
+            "start_s": 100.5,
+            "end_s": 120.833,
+            "start_frame": 2412,
+            "end_frame": 2900
+          }
+        },
+        "evidence": {
+          "text": [
+            {
+              "content": "[CONCEPT DEFINITION 1/1]\nAlias: {Edgar}\nOriginal definition question:\nThis character is my friend, named {Edgar}. Please remember this name. From now on, regardless of who this character might be in real life or in any media, you must refer to them as {Edgar}.",
+              "role": "user_reply",
+              "persistent": true
+            }
+          ],
+          "visual": [
+            {
+              "kind": "image",
+              "uris": [
+                "cases/ICM_000006/evidence/turn_000001/image_001.jpg"
+              ],
+              "timebase": "none",
+              "presentation": "append",
+              "start_s": null
+            }
+          ],
+          "delivery_delay_ticks": 1
+        },
+        "ask": {
+          "mode": "choice",
+          "options": [
+            {
+              "option_id": "A",
+              "text": "Is it true that the character with slim young human with tan skin, spiky dark-brown hair, dark eyebrows, and brown eyes is {Edgar}?",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "B",
+              "text": "Is it true that the character with slim young human with tan skin, straight pale-blond hair, dark eyebrows, and brown eyes is {Edgar}?",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "C",
+              "text": "Is it true that the character with slim young human with tan skin, spiky pale-blond hair, dark eyebrows, and brown eyes is {Edgar}?",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "D",
+              "text": "Is it true that the character with slim young human with pale skin, spiky pale-blond hair, dark eyebrows, and brown eyes is {Edgar}?",
+              "entity_ids": [],
+              "target_view_id": null
+            }
+          ],
+          "correct_option_id": "C",
+          "correct_option_ids": [
+            "C"
+          ],
+          "reference_text": "Please provide the personalized entity definition for {Edgar}."
+        },
+        "answer": {
+          "mode": "choice",
+          "options": [
+            {
+              "option_id": "A",
+              "text": "Black",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "B",
+              "text": "Pink",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "C",
+              "text": "White",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "D",
+              "text": "Yellow",
+              "entity_ids": [],
+              "target_view_id": null
+            }
+          ],
+          "correct_option_id": "A",
+          "reference_text": null
+        },
+        "historical_preference": null
+      }
+    ]
+  },
+  {
+    "case_id": "PACM_000001",
+    "source": {
+      "dataset": "Blender",
+      "video_id": "case_001",
+      "filename": "case_001_main.mp4",
+      "url": null,
+      "input_filename": "case_001_main.mp4"
+    },
+    "annotation_file": "PACM/PACM.json",
+    "annotation_sha256": "e010845ebc04ad0f8f8d2cdd452181f7fb13ca269de1e0bf43f60e5c8d7520e0",
+    "source_duration_s": 150.0,
+    "excerpt_duration_s": 150.0,
+    "turns": [
+      {
+        "turn_id": "PACM_000001_turn_000001",
+        "query": {
+          "text": "When you have watched the characters in the video complete their full actions for the first time, tell me: Who performs the action referred to as 'Qorvani' in this video?",
+          "language": "en"
+        },
+        "query_time_s": 0.0,
+        "time_range": {
+          "start_s": 0.0,
+          "end_s": 150.0
+        },
+        "windows": {
+          "waiting": null,
+          "asking": {
+            "start_s": 0.0,
+            "end_s": 35.0,
+            "start_frame": 0,
+            "end_frame": 840
+          },
+          "answering": {
+            "start_s": 35.0,
+            "end_s": 150.0,
+            "start_frame": 840,
+            "end_frame": 3600
+          }
+        },
+        "evidence": {
+          "text": [],
+          "visual": [
+            {
+              "kind": "video",
+              "uris": [
+                "cases/PACM_000001/evidence/turn_000001/video.mp4"
+              ],
+              "timebase": "relative",
+              "presentation": "append",
+              "start_s": 0.0
+            }
+          ],
+          "delivery_delay_ticks": 1
+        },
+        "ask": {
+          "mode": "choice",
+          "options": [
+            {
+              "option_id": "ask_a",
+              "text": "Does 'Qorvani' require a backward weight shift, a right knee lift, and bringing the left foot back, in that order?",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "ask_b",
+              "text": "Does 'Qorvani' require a right side step, opening both arms at mid height, and a right crossover step, in that order?",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "ask_c",
+              "text": "Does 'Qorvani' require a forward torso lean, a low left-arm sweep, and opening both hands, in that order?",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "ask_d",
+              "text": "Does 'Qorvani' require circling the right wrist, folding both elbows, and a brief pause, in that order?",
+              "entity_ids": [],
+              "target_view_id": null
+            }
+          ],
+          "correct_option_id": "ask_b",
+          "correct_option_ids": [
+            "ask_b"
+          ],
+          "reference_text": null
+        },
+        "answer": {
+          "mode": "choice",
+          "options": [
+            {
+              "option_id": "answer_a",
+              "text": "The person initially on the far left",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "answer_b",
+              "text": "The person initially second from the left",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "answer_c",
+              "text": "The person initially on the far right",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "answer_d",
+              "text": "The person initially third from the left",
+              "entity_ids": [],
+              "target_view_id": null
+            }
+          ],
+          "correct_option_id": "answer_a",
+          "reference_text": null
+        },
+        "historical_preference": null
+      }
+    ]
+  },
+  {
+    "case_id": "AUQ_000014",
+    "source": {
+      "dataset": "youtube",
+      "video_id": "Bg8onIl-_VU",
+      "filename": "Bg8onIl-_VU.f137.1080p.25fps.mp4",
+      "url": "https://www.youtube.com/watch?v=Bg8onIl-_VU",
+      "input_filename": "Bg8onIl-_VU.f137.1080p.25fps.mp4"
+    },
+    "annotation_file": "AUQ/AUQ.json",
+    "annotation_sha256": "de0743bae60dd26cc2e2a6dbd614593c974032df946169d22eb2f956bef5804f",
+    "source_duration_s": 210.92,
+    "excerpt_duration_s": 85.16,
+    "turns": [
+      {
+        "turn_id": "AUQ_000014_turn_000001",
+        "query": {
+          "text": "Tell me when the person sitting in a white chair starts giving a speech.",
+          "language": "en"
+        },
+        "query_time_s": 34.0,
+        "time_range": {
+          "start_s": 34.0,
+          "end_s": 69.0
+        },
+        "windows": {
+          "waiting": null,
+          "asking": {
+            "start_s": 34.0,
+            "end_s": 47.2,
+            "start_frame": 850,
+            "end_frame": 1180
+          },
+          "answering": {
+            "start_s": 47.2,
+            "end_s": 49.28,
+            "start_frame": 1180,
+            "end_frame": 1232
+          }
+        },
+        "evidence": {
+          "text": [
+            {
+              "content": "The woman.",
+              "role": "user_reply",
+              "persistent": true
+            },
+            {
+              "content": "The exact reminder message is: Giving a speech.",
+              "role": "user_reply",
+              "persistent": true
+            }
+          ],
+          "visual": [],
+          "delivery_delay_ticks": 1
+        },
+        "ask": {
+          "mode": "choice",
+          "options": [
+            {
+              "option_id": "ask_a",
+              "text": "I need to know whether the seated person is wearing formal clothing.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "ask_b",
+              "text": "I need to know whether the seated person has a conference lanyard.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "ask_c",
+              "text": "I need to know whether the seated person is male or female.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "ask_d",
+              "text": "I need to know whether the seated person has dark hair.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "ask_e",
+              "text": "I need to know what color chair the seated person occupies.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "ask_f",
+              "text": "I need to know whether the seated person is looking sideways.",
+              "entity_ids": [],
+              "target_view_id": null
+            }
+          ],
+          "correct_option_id": "ask_c",
+          "correct_option_ids": [
+            "ask_c"
+          ],
+          "reference_text": null
+        },
+        "answer": {
+          "mode": "open",
+          "options": [],
+          "correct_option_id": "",
+          "reference_text": "Giving a speech."
+        },
+        "historical_preference": null
+      },
+      {
+        "turn_id": "AUQ_000014_turn_000002",
+        "query": {
+          "text": "Tell me when the man in a suit begins speaking: \"He has started speaking.\"",
+          "language": "en"
+        },
+        "query_time_s": 69.0,
+        "time_range": {
+          "start_s": 69.0,
+          "end_s": 91.6
+        },
+        "windows": {
+          "waiting": null,
+          "asking": {
+            "start_s": 69.0,
+            "end_s": 83.28,
+            "start_frame": 1725,
+            "end_frame": 2082
+          },
+          "answering": {
+            "start_s": 83.28,
+            "end_s": 85.16,
+            "start_frame": 2082,
+            "end_frame": 2129
+          }
+        },
+        "evidence": {
+          "text": [
+            {
+              "content": "He wears a navy tie with white polka dots.",
+              "role": "user_reply",
+              "persistent": true
+            },
+            {
+              "content": "The exact reminder message is: He has started speaking.",
+              "role": "user_reply",
+              "persistent": true
+            }
+          ],
+          "visual": [],
+          "delivery_delay_ticks": 1
+        },
+        "ask": {
+          "mode": "choice",
+          "options": [
+            {
+              "option_id": "ask_a",
+              "text": "I need to know the color and pattern of the panelist's tie.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "ask_b",
+              "text": "I need to know what hair length the seated panelist has.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "ask_c",
+              "text": "I need to know what color chair the seated panelist occupies.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "ask_d",
+              "text": "I need to know what color shirt the seated panelist wears.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "ask_e",
+              "text": "I need to know whether the seated panelist is wearing a lanyard.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "ask_f",
+              "text": "I need to know what color suit jacket the panelist wears.",
+              "entity_ids": [],
+              "target_view_id": null
+            }
+          ],
+          "correct_option_id": "ask_a",
+          "correct_option_ids": [
+            "ask_a"
+          ],
+          "reference_text": null
+        },
+        "answer": {
+          "mode": "open",
+          "options": [],
+          "correct_option_id": "",
+          "reference_text": "He has started speaking."
+        },
+        "historical_preference": null
+      }
+    ]
+  },
+  {
+    "case_id": "WUQ_000026",
+    "source": {
+      "dataset": "StreamingBench",
+      "video_id": "sample_21",
+      "filename": "video.mp4",
+      "url": null,
+      "input_filename": "video.mp4"
+    },
+    "annotation_file": "WUQ/WUQ.json",
+    "annotation_sha256": "a940d3a3dc67814f04c85829a49b5dd39b25f988aa13b601b54006691fabb99b",
+    "source_duration_s": 343.426417,
+    "excerpt_duration_s": 78.411667,
+    "turns": [
+      {
+        "turn_id": "WUQ_000026_turn_000001",
+        "query": {
+          "text": "When the woman wearing magenta-pink clothing, whose top has long sleeves, has finished using tongs to move the noodles beside the stovetop, what is she holding?",
+          "language": "en"
+        },
+        "query_time_s": 0.0,
+        "time_range": {
+          "start_s": 0.0,
+          "end_s": 78.411667
+        },
+        "windows": {
+          "waiting": {
+            "start_s": 0.0,
+            "end_s": 62.5625,
+            "start_frame": 0,
+            "end_frame": 1500
+          },
+          "asking": {
+            "start_s": 62.5625,
+            "end_s": 78.411667,
+            "start_frame": 1500,
+            "end_frame": 1880
+          },
+          "answering": null
+        },
+        "evidence": {
+          "text": [
+            {
+              "content": "You have corrected it successfully. Actually, her magenta-pink top is sleeveless. My question is: When the woman wearing magenta-pink clothing has finished using tongs to move the noodles beside the stovetop, what is she holding?",
+              "role": "user_reply",
+              "persistent": true
+            }
+          ],
+          "visual": [],
+          "delivery_delay_ticks": 1
+        },
+        "ask": {
+          "mode": "choice",
+          "options": [
+            {
+              "option_id": "act_a",
+              "text": "Actually, her magenta-pink top has short sleeves.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "act_b",
+              "text": "Actually, she is wearing a long-sleeved magenta-pink top.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "act_c",
+              "text": "Actually, her magenta-pink top has elbow-length sleeves.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "act_d",
+              "text": "Actually, her magenta-pink top has three-quarter-length sleeves.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "act_e",
+              "text": "Actually, her magenta-pink top has rolled-up long sleeves.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "act_f",
+              "text": "Actually, her magenta-pink top is sleeveless.",
+              "entity_ids": [],
+              "target_view_id": null
+            }
+          ],
+          "correct_option_id": "act_f",
+          "correct_option_ids": [
+            "act_f"
+          ],
+          "reference_text": null
+        },
+        "answer": {
+          "mode": "choice",
+          "options": [
+            {
+              "option_id": "answer_a",
+              "text": "A spatula.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "answer_b",
+              "text": "A spoon.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "answer_c",
+              "text": "An olive oil bottle.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "answer_d",
+              "text": "A whisk.",
+              "entity_ids": [],
+              "target_view_id": null
+            }
+          ],
+          "correct_option_id": "answer_c",
+          "reference_text": null
+        },
+        "historical_preference": null
+      }
+    ]
+  },
+  {
+    "case_id": "UPM_000020",
+    "source": {
+      "dataset": "YouTube",
+      "video_id": "20_CiwrnjpGYuo",
+      "filename": "20_CiwrnjpGYuo.mp4",
+      "url": null,
+      "input_filename": "20_CiwrnjpGYuo.mp4"
+    },
+    "annotation_file": "UPM/UPM.json",
+    "annotation_sha256": "ea210f19b57f4ede959958f5417c4e339955d7cbdfc2db0570eb9f9dc5fed28c",
+    "source_duration_s": 252.2,
+    "excerpt_duration_s": 249.16,
+    "turns": [
+      {
+        "turn_id": "UPM_000020_turn_000001",
+        "query": {
+          "text": "When large “outfit 6” text appears in the center and the model changes into a white shirt with a khaki slit midi skirt, tell me which of all the outfits shown so far suits you best?",
+          "language": "en"
+        },
+        "query_time_s": 0.0,
+        "time_range": {
+          "start_s": 0.0,
+          "end_s": 79.08
+        },
+        "windows": {
+          "waiting": null,
+          "asking": {
+            "start_s": 0.0,
+            "end_s": 66.96,
+            "start_frame": 0,
+            "end_frame": 1674
+          },
+          "answering": {
+            "start_s": 66.96,
+            "end_s": 73.04,
+            "start_frame": 1674,
+            "end_frame": 1826
+          }
+        },
+        "evidence": {
+          "text": [
+            {
+              "content": "I prefer white floral sleeve graphics.",
+              "role": "user_reply",
+              "persistent": true
+            }
+          ],
+          "visual": [],
+          "delivery_delay_ticks": 1
+        },
+        "ask": {
+          "mode": "choice",
+          "options": [
+            {
+              "option_id": "ask_a",
+              "text": "What footwear color would you prefer with the outfit?",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "ask_b",
+              "text": "How much midriff exposure would you prefer in the outfit?",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "ask_c",
+              "text": "Would you prefer the outfit styled with a black crossbody bag?",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "ask_d",
+              "text": "What sleeve decoration would you prefer on the outfit's top?",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "ask_e",
+              "text": "Would you prefer loose-fitting pants as the outfit's bottom?",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "ask_f",
+              "text": "Would you prefer a button-front top in the outfit?",
+              "entity_ids": [],
+              "target_view_id": null
+            }
+          ],
+          "correct_option_id": "ask_d",
+          "correct_option_ids": [
+            "ask_d"
+          ],
+          "reference_text": null
+        },
+        "answer": {
+          "mode": "choice",
+          "options": [
+            {
+              "option_id": "a10a835f-cb0d-41a6-b2e7-931d10203d72",
+              "text": "Blue fuzzy cardigan, white wide-leg cargo pants, and black crossbody bag.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "64518308-4164-42aa-9eac-013031ac84cf",
+              "text": "Light gray ribbed sweater with white loose cargo pants.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "cd3f8d3d-a9c1-4a7e-ae76-bc7e2cf23f2c",
+              "text": "Black floral-sleeved cardigan with gray-green wide-leg cargo pants.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "680444e2-cb97-453c-9a7d-e5618a8963c3",
+              "text": "Cropped white shirt with gray-green cargo pants and black handbag.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "c693d225-b2f2-42b5-8ade-42723b3a44be",
+              "text": "Cropped white blouse, loose black pants, and black crossbody bag.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "4e15e979-05dc-4e1e-b260-50b1b88903b5",
+              "text": "Cropped white shirt with khaki slit midi skirt.",
+              "entity_ids": [],
+              "target_view_id": null
+            }
+          ],
+          "correct_option_id": "cd3f8d3d-a9c1-4a7e-ae76-bc7e2cf23f2c",
+          "reference_text": null
+        },
+        "historical_preference": null
+      },
+      {
+        "turn_id": "UPM_000020_turn_000002",
+        "query": {
+          "text": "When the large \"outfit 12\" caption appears in the center and the model changes into an all-black look with a knitted cardigan and wide-leg cargo trousers, tell me which of all the outfits shown so far suits you best?",
+          "language": "en"
+        },
+        "query_time_s": 79.08,
+        "time_range": {
+          "start_s": 79.08,
+          "end_s": 166.6
+        },
+        "windows": {
+          "waiting": null,
+          "asking": {
+            "start_s": 79.08,
+            "end_s": 149.16,
+            "start_frame": 1977,
+            "end_frame": 3729
+          },
+          "answering": {
+            "start_s": 149.16,
+            "end_s": 159.64,
+            "start_frame": 3729,
+            "end_frame": 3991
+          }
+        },
+        "evidence": {
+          "text": [
+            {
+              "content": "I prefer a cropped button-front design with a V neckline.",
+              "role": "user_reply",
+              "persistent": true
+            }
+          ],
+          "visual": [],
+          "delivery_delay_ticks": 1
+        },
+        "ask": {
+          "mode": "choice",
+          "options": [
+            {
+              "option_id": "ask_a",
+              "text": "Which overall outfit palette do you prefer: light neutral or all black?",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "ask_b",
+              "text": "Which trouser silhouette do you prefer: wide-leg, tapered, or balloon-shaped?",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "ask_c",
+              "text": "How much midriff exposure do you prefer from the top?",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "ask_d",
+              "text": "Which top construction do you prefer: button-front, pullover, or fitted T-shirt?",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "ask_e",
+              "text": "Which trouser color do you prefer: light gray, white, or black?",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "ask_f",
+              "text": "Which footwear look do you prefer: light athletic shoes or something darker?",
+              "entity_ids": [],
+              "target_view_id": null
+            }
+          ],
+          "correct_option_id": "ask_d",
+          "correct_option_ids": [
+            "ask_d"
+          ],
+          "reference_text": null
+        },
+        "answer": {
+          "mode": "choice",
+          "options": [
+            {
+              "option_id": "9c971363-3d40-46e2-bf44-bdd6012163a2",
+              "text": "Cropped white V-neck blouse with light gray pleated wide-leg trousers",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "f8806f63-568c-4155-96fd-7f5e042383ec",
+              "text": "Oversized beige ribbed sweater with light gray wide-leg trousers",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "c1839b5e-d2b7-47da-86ea-698605880544",
+              "text": "Cropped white fitted T-shirt with light gray pleated trousers",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "6e0f6aca-366a-4b32-9567-15ab6f109a17",
+              "text": "Cropped white T-shirt with white balloon-leg drawstring trousers",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "69eee1bc-1884-4111-869e-6be1bb2f98b6",
+              "text": "Black ribbed sweater with black wide-leg cargo trousers",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "839149c9-62a3-4762-a3cb-04f610911686",
+              "text": "Black graphic cardigan, cropped camisole, and black cargo trousers",
+              "entity_ids": [],
+              "target_view_id": null
+            }
+          ],
+          "correct_option_id": "9c971363-3d40-46e2-bf44-bdd6012163a2",
+          "reference_text": null
+        },
+        "historical_preference": null
+      },
+      {
+        "turn_id": "UPM_000020_turn_000003",
+        "query": {
+          "text": "When the large \"outfit 18\" subtitle appears in the middle and the model changes into a black chunky-knit sweater with olive-green cargo pants, tell me which of all the outfits shown so far suits you best?",
+          "language": "en"
+        },
+        "query_time_s": 166.6,
+        "time_range": {
+          "start_s": 166.6,
+          "end_s": 252.16
+        },
+        "windows": {
+          "waiting": null,
+          "asking": {
+            "start_s": 166.6,
+            "end_s": 239.56,
+            "start_frame": 4165,
+            "end_frame": 5989
+          },
+          "answering": {
+            "start_s": 239.56,
+            "end_s": 249.16,
+            "start_frame": 5989,
+            "end_frame": 6229
+          }
+        },
+        "evidence": {
+          "text": [
+            {
+              "content": "I prefer over-ear headphones.",
+              "role": "user_reply",
+              "persistent": true
+            }
+          ],
+          "visual": [],
+          "delivery_delay_ticks": 1
+        },
+        "ask": {
+          "mode": "choice",
+          "options": [
+            {
+              "option_id": "ask_a",
+              "text": "Which sleeve length do you prefer for this outfit?",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "ask_b",
+              "text": "Do you prefer cargo trousers or jeans for this look?",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "ask_c",
+              "text": "Which top color do you prefer among the outfits shown?",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "ask_d",
+              "text": "How much midriff coverage do you prefer in an outfit?",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "ask_e",
+              "text": "What visible head accessory do you prefer with the outfit?",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "ask_f",
+              "text": "Which footwear style do you prefer with these outfits?",
+              "entity_ids": [],
+              "target_view_id": null
+            }
+          ],
+          "correct_option_id": "ask_e",
+          "correct_option_ids": [
+            "ask_e"
+          ],
+          "reference_text": null
+        },
+        "answer": {
+          "mode": "choice",
+          "options": [
+            {
+              "option_id": "4ad10513-0624-4f5c-805a-adc745c07044",
+              "text": "Gray ribbed collared sweater, navy cargo trousers, and white sneakers.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "31276f5b-f5d9-4392-a39b-af952ea9074f",
+              "text": "Black cropped buttoned top, black wide cargo trousers, and white sneakers.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "7fbc6adb-eb08-48a8-89c5-b42df338821a",
+              "text": "Beige ribbed sweater, black loose trousers, and white sneakers.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "9f0b3558-2a01-4ccd-878c-9289a35659f5",
+              "text": "White cropped T-shirt, dark blue wide-leg jeans, pale slip-on shoes.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "8ff3ccb5-ed83-4ef8-88bc-1de350ac2ee9",
+              "text": "White camisole, dark blue straight-leg jeans, and pale slip-on shoes.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "5b4eaf17-206d-49d9-b5b6-622d7b157b10",
+              "text": "Black chunky ribbed sweater, olive cargo trousers, dark sneakers, and headphones.",
+              "entity_ids": [],
+              "target_view_id": null
+            }
+          ],
+          "correct_option_id": "5b4eaf17-206d-49d9-b5b6-622d7b157b10",
+          "reference_text": null
+        },
+        "historical_preference": null
+      }
+    ]
+  },
+  {
+    "case_id": "UPC_000047",
+    "source": {
+      "dataset": "YouTube",
+      "video_id": "47_3L71cTqRc80",
+      "filename": "47_3L71cTqRc80.mp4",
+      "url": null,
+      "input_filename": "47_3L71cTqRc80.mp4"
+    },
+    "annotation_file": "UPC/UPC.json",
+    "annotation_sha256": "59ee5e70313b9a47564988069c6d623105df2b1ce7f2716c844f0d238984847e",
+    "source_duration_s": 153.533333,
+    "excerpt_duration_s": 110.2,
+    "turns": [
+      {
+        "turn_id": "UPC_000047_turn_000001",
+        "query": {
+          "text": "When the backgrounds on both sides turn blue-gray with marble veining and a dark-brown wooden chair with curved vertical back bars appears, now that you have moved from a narrow dining nook to a larger dining room, tell me which of all the dining chairs shown so far best suits you?",
+          "language": "en"
+        },
+        "query_time_s": 0.0,
+        "time_range": {
+          "start_s": 0.0,
+          "end_s": 35.5
+        },
+        "windows": {
+          "waiting": null,
+          "asking": {
+            "start_s": 0.0,
+            "end_s": 30.0,
+            "start_frame": 0,
+            "end_frame": 900
+          },
+          "answering": {
+            "start_s": 30.0,
+            "end_s": 35.5,
+            "start_frame": 900,
+            "end_frame": 1065
+          }
+        },
+        "evidence": {
+          "text": [
+            {
+              "content": "I currently prefer a single hourglass-shaped central back splat.",
+              "role": "user_reply",
+              "persistent": true
+            }
+          ],
+          "visual": [],
+          "delivery_delay_ticks": 1
+        },
+        "ask": {
+          "mode": "choice",
+          "options": [
+            {
+              "option_id": "ask_a",
+              "text": "What wood tone do you currently prefer: light, warm, or dark brown?",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "ask_b",
+              "text": "Which central backrest design do you currently prefer: straight slats or hourglass-shaped splat?",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "ask_c",
+              "text": "Do you currently prefer bare wooden seats or padded upholstery?",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "ask_d",
+              "text": "Which top-rail contour do you currently favor: straight, arched, or subtly curved?",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "ask_e",
+              "text": "Do you currently want armless dining chairs or chairs with armrests?",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "ask_f",
+              "text": "What leg profile do you currently favor: straight-sided, tapered, or curved?",
+              "entity_ids": [],
+              "target_view_id": null
+            }
+          ],
+          "correct_option_id": "ask_b",
+          "correct_option_ids": [
+            "ask_b"
+          ],
+          "reference_text": null
+        },
+        "answer": {
+          "mode": "choice",
+          "options": [
+            {
+              "option_id": "470648d0-b9bf-4017-b9ab-70c27f89ce36",
+              "text": "Reddish-brown wooden chairs with three straight back slats and gold inlay.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "e23cfd90-e1b9-4ecc-bb76-d733e106e5ed",
+              "text": "Light-brown wooden chairs with geometric segmented center backrests.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "f6bb0ff9-31bf-464f-bd16-d48fd5181ddd",
+              "text": "Dark-brown wooden ladder-back chairs with oval cutout handles.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "6336ed8b-357f-480a-bcff-6df5f72e37fc",
+              "text": "Warm-brown wooden chairs with single hourglass-shaped central back splats.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "79d9d4f5-cc4d-4443-bff2-ad941361cf6f",
+              "text": "Orange-brown wooden chairs with five narrow vertical back slats.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "8d9256b6-239e-44d5-b85f-64afe3c4c1e7",
+              "text": "Light-brown wooden chairs with three curved horizontal back rails.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "9d0a739c-9681-4afa-a224-6477dd006333",
+              "text": "Dark-brown wooden chairs with curved vertical bars and square accents.",
+              "entity_ids": [],
+              "target_view_id": null
+            }
+          ],
+          "correct_option_id": "6336ed8b-357f-480a-bcff-6df5f72e37fc",
+          "reference_text": null
+        },
+        "historical_preference": "I preferred three full-height straight vertical back slats.\nMy former narrow dining nook led me to prefer a sparse three-slat backrest pattern; I have moved from a narrow dining nook to a larger dining room."
+      },
+      {
+        "turn_id": "UPC_000047_turn_000002",
+        "query": {
+          "text": "When the title card reading “Wooden Dining Chairs With Arms” appears, now that you have moved and no longer have your old light-wood dining table, tell me which of all the dining chairs shown so far suits you best?",
+          "language": "en"
+        },
+        "query_time_s": 35.5,
+        "time_range": {
+          "start_s": 35.5,
+          "end_s": 75.5
+        },
+        "windows": {
+          "waiting": null,
+          "asking": {
+            "start_s": 35.5,
+            "end_s": 70.5,
+            "start_frame": 1065,
+            "end_frame": 2115
+          },
+          "answering": {
+            "start_s": 70.5,
+            "end_s": 75.1,
+            "start_frame": 2115,
+            "end_frame": 2253
+          }
+        },
+        "evidence": {
+          "text": [
+            {
+              "content": "I now prefer a light gray painted finish.",
+              "role": "user_reply",
+              "persistent": true
+            }
+          ],
+          "visual": [],
+          "delivery_delay_ticks": 1
+        },
+        "ask": {
+          "mode": "choice",
+          "options": [
+            {
+              "option_id": "ask_a",
+              "text": "What chair finish do you currently prefer: natural, dark brown, or light gray?",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "ask_b",
+              "text": "Do you currently prefer vertical slats or a solid-panel chair back?",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "ask_c",
+              "text": "Do you currently want an upholstered seat or a bare solid seat?",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "ask_d",
+              "text": "Do you currently prefer dining chairs with arms or without arms?",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "ask_e",
+              "text": "Do you currently want straight front legs or visibly curved front legs?",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "ask_f",
+              "text": "Do you prefer a straight top rail or a visibly curved top rail?",
+              "entity_ids": [],
+              "target_view_id": null
+            }
+          ],
+          "correct_option_id": "ask_a",
+          "correct_option_ids": [
+            "ask_a"
+          ],
+          "reference_text": null
+        },
+        "answer": {
+          "mode": "choice",
+          "options": [
+            {
+              "option_id": "7eb0143b-960c-4fe9-abd3-6456184697dd",
+              "text": "Pair of light natural-wood chairs with tall vertical-slat backs.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "bb7799fd-03ea-4f5e-9690-91fde5b3da88",
+              "text": "Pair of dark reddish-brown chairs with vertical-slat backs.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "156b89a2-20a8-4327-aaec-19d5b8b91436",
+              "text": "Pair of medium-brown chairs with broad split-panel backs.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "7ac0ab02-a069-43ff-b6c1-b0ddc1985683",
+              "text": "Pair of medium-brown chairs with curved rails and openwork backs.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "8f6f226f-e2e2-45b2-8b32-00958e733d3f",
+              "text": "Pair of honey-brown chairs with oval openwork backs and curved legs.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "e48ada66-0a70-4034-a977-9398931d38f8",
+              "text": "Pair of reddish-brown chairs with slats and woven-look upper panels.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "36064b27-1062-49af-a357-caf3e8abaaef",
+              "text": "Pair of light gray painted chairs with slatted backs and curved seats.",
+              "entity_ids": [],
+              "target_view_id": null
+            }
+          ],
+          "correct_option_id": "36064b27-1062-49af-a357-caf3e8abaaef",
+          "reference_text": null
+        },
+        "historical_preference": "I preferred a light natural-wood finish.\nMy former dining area had a light natural-wood table that I needed chairs to match; I have moved and no longer have my old light-wood dining table."
+      },
+      {
+        "turn_id": "UPC_000047_turn_000003",
+        "query": {
+          "text": "When the title card reading “Upholstered Chair with Wooden Back” appears, now that you have moved from a dining nook with a low window behind the table to a room with high windows, tell me which of all the dining chairs shown so far is best for you?",
+          "language": "en"
+        },
+        "query_time_s": 75.5,
+        "time_range": {
+          "start_s": 75.5,
+          "end_s": 110.4
+        },
+        "windows": {
+          "waiting": null,
+          "asking": {
+            "start_s": 75.5,
+            "end_s": 105.5,
+            "start_frame": 2265,
+            "end_frame": 3165
+          },
+          "answering": {
+            "start_s": 105.5,
+            "end_s": 110.2,
+            "start_frame": 3165,
+            "end_frame": 3306
+          }
+        },
+        "evidence": {
+          "text": [
+            {
+              "content": "I now prefer a curved horizontal-slat backrest.",
+              "role": "user_reply",
+              "persistent": true
+            }
+          ],
+          "visual": [],
+          "delivery_delay_ticks": 1
+        },
+        "ask": {
+          "mode": "choice",
+          "options": [
+            {
+              "option_id": "ask_a",
+              "text": "Which visible wood-tone family do you currently prefer for the chairs?",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "ask_b",
+              "text": "Do you currently prefer dining chairs with or without armrests?",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "ask_c",
+              "text": "What seat surface style do you currently prefer: upholstered or bare?",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "ask_d",
+              "text": "What backrest slat orientation and contour do you currently prefer?",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "ask_e",
+              "text": "Do you currently prefer straight or curved front-leg profiles?",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "ask_f",
+              "text": "Do you prefer matching chair pairs or single-chair presentations?",
+              "entity_ids": [],
+              "target_view_id": null
+            }
+          ],
+          "correct_option_id": "ask_d",
+          "correct_option_ids": [
+            "ask_d"
+          ],
+          "reference_text": null
+        },
+        "answer": {
+          "mode": "choice",
+          "options": [
+            {
+              "option_id": "89935ad2-7415-451e-88db-6405aff9387a",
+              "text": "Pair of reddish-brown armchairs with compact straight vertical-slat wooden backs.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "e3385cac-eaf7-447f-974e-d7efc93227a4",
+              "text": "Pair of gray-brown armchairs with curved horizontal ladder backs.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "9993474b-e852-4e98-848f-376b25846e01",
+              "text": "Pair of burgundy wooden armchairs with tall geometric open backs.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "fdc016c8-f547-4d36-b242-bd6ecabd54a0",
+              "text": "Pair of rustic brown armchairs with tall straight vertical-slat backs.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "e5eefde5-5f55-4ccc-9eb7-c6882dbbf12c",
+              "text": "Pair of medium-brown armchairs with low open rectangular backs.",
+              "entity_ids": [],
+              "target_view_id": null
+            },
+            {
+              "option_id": "06fca017-6ed7-40ca-8350-45ef66b1d5e0",
+              "text": "Pair of orange-brown armchairs with tall narrow vertical-slat backs.",
+              "entity_ids": [],
+              "target_view_id": null
+            }
+          ],
+          "correct_option_id": "e3385cac-eaf7-447f-974e-d7efc93227a4",
+          "reference_text": null
+        },
+        "historical_preference": "I preferred a compact, straight vertical-slat backrest.\nMy former dining nook had a low window directly behind the table; I have moved to a dining room with high windows."
+      }
+    ]
+  }
+]

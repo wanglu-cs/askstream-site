@@ -7,17 +7,19 @@ The design follows [MMR-V](https://mmr-v.github.io/): a dark, full-screen cover 
 ## Local preview
 
 ```sh
-python3 -m http.server 8000
+python3 -m pip install RangeHTTPServer
+python3 -m RangeHTTPServer 8000
 ```
 
-Open <http://localhost:8000/>. No build step or JavaScript dependencies are required. Styles, scripts, figures, and fonts are served locally.
+Open <http://localhost:8000/>. HTTP byte-range support is needed for reliable video seeking; GitHub Pages provides it in production. No build step or JavaScript dependencies are required. Styles, scripts, figures, fonts, and example videos are served locally.
 
 ## Content and assets
 
 - `index.html`: paper title, authors, affiliations, abstract, section content, resource links, and citation.
 - `assets/style.css`: layout, responsive styles, and fonts.
 - `assets/site.js`: results from paper Tables 2 and 6, evaluation setting switch, model filters, column sorting, and citation copying.
-- `assets/examples-data.js`: eight editable example cases with three simulated interaction turns per case.
+- `assets/examples-data.js`: eight real benchmark cases with 15 original interaction turns.
+- `assets/examples/`: browser-ready video excerpts, reference evidence, option images, source annotations, and a provenance manifest.
 - `assets/examples.js`: case/turn selection, annotated timeline, action and answer choices, and reference interactions.
 - `assets/*.png`: figures cropped directly from `ICLR2027.pdf`.
 - `ICLR2027.pdf`: downloadable paper.
@@ -30,15 +32,17 @@ The supplied `assets/icon.png` remains as source material; the page uses a text 
 
 Paper figures use transparent CSS backgrounds so their existing PNG transparency is preserved. Styles and scripts include a version query to refresh cached copies after this update.
 
-The Examples section has eight tasks (KVEM, VIM, ICM, PACM, AUQ, WUQ, UPM, UPC), each with three illustrative turns. Timings, choices, and multi-turn continuations are simulated and labeled as such. All eight videos are intentionally blank. Visitors can click a turn, an action window, or a Query/Ask/Answer timestamp, or scrub the progress bar; the active query and choices update together. Action and answer choices are separate tabs, with an optional reference reveal.
+The Examples section covers eight tasks with visually reviewed benchmark cases: KVEM_000018 (2 turns), VIM_000022 (2), ICM_000006 (1), PACM_000001 (1), AUQ_000014 (2), WUQ_000026 (1), UPM_000020 (3), and UPC_000047 (3). Excerpts start at original time zero and stop after the selected answer/ask window; no internal cuts or playback speed changes are applied. PACM uses the benchmark's original Blender animation. All other media comes from the corresponding benchmark cases.
 
-To add real cases, edit `assets/examples-data.js`. Set each case's `videoSrc` from `null` to a local video path (for example, `assets/video/kvem.mp4`), set `duration` in seconds, and replace its `turns` array. Every turn has a unique `id`, a `query`, `actionOptions` and `answerOptions` arrays, zero-based `correctAction` and `correctAnswer` indices, and a `userReply`. The timestamps are seconds from the beginning of the video, ordered `start < ask < askEnd <= answer < end <= duration`; list turns chronologically without overlap. The timeline renders WAIT before/after the ASK window, then ANSWER. The same player and annotations synchronize automatically when a video is supplied. Update the demo label and summary once real annotations replace the simulated examples. Do not reuse demo media from the reference website.
+Queries, options, correct option IDs, replies, and time windows are imported from the dataset without rewriting. KVEM includes the annotated reveal stream; VIM uses each turn's initial camera and includes every valid reference camera; ICM includes its concept image; PACM includes its motion-definition video. Preference examples include all answer images and UPC's historical preferences. AUQ retains open answers rather than invented multiple-choice options. For KVEM, VIM, and WUQ, the answer window depends on the correct ASK and evidence arrival (one evaluation tick later); the UI explicitly describes this instead of inventing fixed answer timestamps. Unannotated gaps are not labeled WAIT or ANSWER.
+
+Rebuild with `python scripts/build_examples.py /path/to/ProactiveBenchmark` (requires FFmpeg and Pillow). The script exports H.264/AAC MP4s with fast-start metadata, preserving aspect ratios and source timestamps. `assets/examples/annotations.json` holds selected source annotation fields; `manifest.json` maps source media to site assets. See `docs/example-review.md` for the visual review. Existing video exports are reused; remove only the specific generated asset you intend to regenerate when changing encoding settings.
 
 The Paper button opens the local PDF. Code and Benchmark URLs are taken from the links embedded in the PDF. The citation uses a provisional `@misc` entry; update its bibliographic metadata when an official publication or preprint identifier is available.
 
 ## Waiting list
 
-- [ ] Eight study cases: add the real videos and multi-turn annotations (queries, action/answer options, user replies, and timestamps) for KVEM, VIM, ICM, PACM, AUQ, WUQ, UPM, and UPC, replacing the simulated examples.
+- [x] Eight study cases: real video excerpts, original annotations, and reference evidence for all eight tasks.
 - [ ] Paper link: add the final public paper URL.
 - [ ] Code link: add or confirm the released code repository URL.
 - [ ] Data link: add or confirm the released dataset URL.

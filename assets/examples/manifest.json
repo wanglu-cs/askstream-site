@@ -1,0 +1,287 @@
+{
+  "timebase": "Original video seconds; excerpts start at zero and contain no internal cuts.",
+  "media": [
+    {
+      "source": "KVEM/cases/KVEM_000018/video.mp4",
+      "asset": "assets/examples/kvem/video.mp4",
+      "start_s": 0,
+      "end_s": 40.874167
+    },
+    {
+      "source": "KVEM/cases/KVEM_000018/evidence/reveal.mp4",
+      "asset": "assets/examples/kvem/evidence-reveal.mp4",
+      "start_s": 0,
+      "end_s": 40.874167
+    },
+    {
+      "source": "VIM/cases/VIM_000022/views/view_005.mp4",
+      "asset": "assets/examples/vim/views-view_005.mp4",
+      "start_s": 0,
+      "end_s": 45.0
+    },
+    {
+      "source": "VIM/cases/VIM_000022/views/view_003.mp4",
+      "asset": "assets/examples/vim/views-view_003.mp4",
+      "start_s": 0,
+      "end_s": 45.0
+    },
+    {
+      "source": "VIM/cases/VIM_000022/views/view_004.mp4",
+      "asset": "assets/examples/vim/views-view_004.mp4",
+      "start_s": 0,
+      "end_s": 45.0
+    },
+    {
+      "source": "VIM/cases/VIM_000022/views/view_001.mp4",
+      "asset": "assets/examples/vim/views-view_001.mp4",
+      "start_s": 0,
+      "end_s": 45.0
+    },
+    {
+      "source": "VIM/cases/VIM_000022/views/view_002.mp4",
+      "asset": "assets/examples/vim/views-view_002.mp4",
+      "start_s": 0,
+      "end_s": 45.0
+    },
+    {
+      "source": "ICM/cases/ICM_000006/video.mp4",
+      "asset": "assets/examples/icm/video.mp4",
+      "start_s": 0,
+      "end_s": 120.833
+    },
+    {
+      "source": "ICM/cases/ICM_000006/evidence/turn_000001/image_001.jpg",
+      "asset": "assets/examples/icm/evidence-turn_000001-image_001.jpg.webp"
+    },
+    {
+      "source": "PACM/cases/PACM_000001/video.mp4",
+      "asset": "assets/examples/pacm/video.mp4",
+      "start_s": 0,
+      "end_s": 150.0
+    },
+    {
+      "source": "PACM/cases/PACM_000001/evidence/turn_000001/video.mp4",
+      "asset": "assets/examples/pacm/evidence-turn_000001-video.mp4",
+      "start_s": 0,
+      "end_s": null
+    },
+    {
+      "source": "AUQ/cases/AUQ_000014/video.mp4",
+      "asset": "assets/examples/auq/video.mp4",
+      "start_s": 0,
+      "end_s": 85.16
+    },
+    {
+      "source": "WUQ/cases/WUQ_000026/video.mp4",
+      "asset": "assets/examples/wuq/video.mp4",
+      "start_s": 0,
+      "end_s": 78.411667
+    },
+    {
+      "source": "UPM/cases/UPM_000020/video.mp4",
+      "asset": "assets/examples/upm/video.mp4",
+      "start_s": 0,
+      "end_s": 249.16
+    },
+    {
+      "source": "UPM/cases/UPM_000020/evidence/turn_000001/option_001.jpg",
+      "asset": "assets/examples/upm/evidence-turn_000001-option_001.jpg.webp"
+    },
+    {
+      "source": "UPM/cases/UPM_000020/evidence/turn_000001/option_002.jpg",
+      "asset": "assets/examples/upm/evidence-turn_000001-option_002.jpg.webp"
+    },
+    {
+      "source": "UPM/cases/UPM_000020/evidence/turn_000001/option_003.jpg",
+      "asset": "assets/examples/upm/evidence-turn_000001-option_003.jpg.webp"
+    },
+    {
+      "source": "UPM/cases/UPM_000020/evidence/turn_000001/option_004.jpg",
+      "asset": "assets/examples/upm/evidence-turn_000001-option_004.jpg.webp"
+    },
+    {
+      "source": "UPM/cases/UPM_000020/evidence/turn_000001/option_005.jpg",
+      "asset": "assets/examples/upm/evidence-turn_000001-option_005.jpg.webp"
+    },
+    {
+      "source": "UPM/cases/UPM_000020/evidence/turn_000001/option_006.jpg",
+      "asset": "assets/examples/upm/evidence-turn_000001-option_006.jpg.webp"
+    },
+    {
+      "source": "UPM/cases/UPM_000020/evidence/turn_000002/option_001.jpg",
+      "asset": "assets/examples/upm/evidence-turn_000002-option_001.jpg.webp"
+    },
+    {
+      "source": "UPM/cases/UPM_000020/evidence/turn_000002/option_002.jpg",
+      "asset": "assets/examples/upm/evidence-turn_000002-option_002.jpg.webp"
+    },
+    {
+      "source": "UPM/cases/UPM_000020/evidence/turn_000002/option_003.jpg",
+      "asset": "assets/examples/upm/evidence-turn_000002-option_003.jpg.webp"
+    },
+    {
+      "source": "UPM/cases/UPM_000020/evidence/turn_000002/option_004.jpg",
+      "asset": "assets/examples/upm/evidence-turn_000002-option_004.jpg.webp"
+    },
+    {
+      "source": "UPM/cases/UPM_000020/evidence/turn_000002/option_005.jpg",
+      "asset": "assets/examples/upm/evidence-turn_000002-option_005.jpg.webp"
+    },
+    {
+      "source": "UPM/cases/UPM_000020/evidence/turn_000002/option_006.jpg",
+      "asset": "assets/examples/upm/evidence-turn_000002-option_006.jpg.webp"
+    },
+    {
+      "source": "UPM/cases/UPM_000020/evidence/turn_000003/option_001.jpg",
+      "asset": "assets/examples/upm/evidence-turn_000003-option_001.jpg.webp"
+    },
+    {
+      "source": "UPM/cases/UPM_000020/evidence/turn_000003/option_002.jpg",
+      "asset": "assets/examples/upm/evidence-turn_000003-option_002.jpg.webp"
+    },
+    {
+      "source": "UPM/cases/UPM_000020/evidence/turn_000003/option_003.jpg",
+      "asset": "assets/examples/upm/evidence-turn_000003-option_003.jpg.webp"
+    },
+    {
+      "source": "UPM/cases/UPM_000020/evidence/turn_000003/option_004.jpg",
+      "asset": "assets/examples/upm/evidence-turn_000003-option_004.jpg.webp"
+    },
+    {
+      "source": "UPM/cases/UPM_000020/evidence/turn_000003/option_005.jpg",
+      "asset": "assets/examples/upm/evidence-turn_000003-option_005.jpg.webp"
+    },
+    {
+      "source": "UPM/cases/UPM_000020/evidence/turn_000003/option_006.jpg",
+      "asset": "assets/examples/upm/evidence-turn_000003-option_006.jpg.webp"
+    },
+    {
+      "source": "UPC/cases/UPC_000047/video.mp4",
+      "asset": "assets/examples/upc/video.mp4",
+      "start_s": 0,
+      "end_s": 110.2
+    },
+    {
+      "source": "UPC/cases/UPC_000047/evidence/turn_000001/option_001.jpg",
+      "asset": "assets/examples/upc/evidence-turn_000001-option_001.jpg.webp"
+    },
+    {
+      "source": "UPC/cases/UPC_000047/evidence/turn_000001/option_002.jpg",
+      "asset": "assets/examples/upc/evidence-turn_000001-option_002.jpg.webp"
+    },
+    {
+      "source": "UPC/cases/UPC_000047/evidence/turn_000001/option_003.jpg",
+      "asset": "assets/examples/upc/evidence-turn_000001-option_003.jpg.webp"
+    },
+    {
+      "source": "UPC/cases/UPC_000047/evidence/turn_000001/option_004.jpg",
+      "asset": "assets/examples/upc/evidence-turn_000001-option_004.jpg.webp"
+    },
+    {
+      "source": "UPC/cases/UPC_000047/evidence/turn_000001/option_005.jpg",
+      "asset": "assets/examples/upc/evidence-turn_000001-option_005.jpg.webp"
+    },
+    {
+      "source": "UPC/cases/UPC_000047/evidence/turn_000001/option_006.jpg",
+      "asset": "assets/examples/upc/evidence-turn_000001-option_006.jpg.webp"
+    },
+    {
+      "source": "UPC/cases/UPC_000047/evidence/turn_000001/option_007.jpg",
+      "asset": "assets/examples/upc/evidence-turn_000001-option_007.jpg.webp"
+    },
+    {
+      "source": "UPC/cases/UPC_000047/evidence/turn_000002/option_001.jpg",
+      "asset": "assets/examples/upc/evidence-turn_000002-option_001.jpg.webp"
+    },
+    {
+      "source": "UPC/cases/UPC_000047/evidence/turn_000002/option_002.jpg",
+      "asset": "assets/examples/upc/evidence-turn_000002-option_002.jpg.webp"
+    },
+    {
+      "source": "UPC/cases/UPC_000047/evidence/turn_000002/option_003.jpg",
+      "asset": "assets/examples/upc/evidence-turn_000002-option_003.jpg.webp"
+    },
+    {
+      "source": "UPC/cases/UPC_000047/evidence/turn_000002/option_004.jpg",
+      "asset": "assets/examples/upc/evidence-turn_000002-option_004.jpg.webp"
+    },
+    {
+      "source": "UPC/cases/UPC_000047/evidence/turn_000002/option_005.jpg",
+      "asset": "assets/examples/upc/evidence-turn_000002-option_005.jpg.webp"
+    },
+    {
+      "source": "UPC/cases/UPC_000047/evidence/turn_000002/option_006.jpg",
+      "asset": "assets/examples/upc/evidence-turn_000002-option_006.jpg.webp"
+    },
+    {
+      "source": "UPC/cases/UPC_000047/evidence/turn_000002/option_007.jpg",
+      "asset": "assets/examples/upc/evidence-turn_000002-option_007.jpg.webp"
+    },
+    {
+      "source": "UPC/cases/UPC_000047/evidence/turn_000003/option_001.jpg",
+      "asset": "assets/examples/upc/evidence-turn_000003-option_001.jpg.webp"
+    },
+    {
+      "source": "UPC/cases/UPC_000047/evidence/turn_000003/option_002.jpg",
+      "asset": "assets/examples/upc/evidence-turn_000003-option_002.jpg.webp"
+    },
+    {
+      "source": "UPC/cases/UPC_000047/evidence/turn_000003/option_003.jpg",
+      "asset": "assets/examples/upc/evidence-turn_000003-option_003.jpg.webp"
+    },
+    {
+      "source": "UPC/cases/UPC_000047/evidence/turn_000003/option_004.jpg",
+      "asset": "assets/examples/upc/evidence-turn_000003-option_004.jpg.webp"
+    },
+    {
+      "source": "UPC/cases/UPC_000047/evidence/turn_000003/option_005.jpg",
+      "asset": "assets/examples/upc/evidence-turn_000003-option_005.jpg.webp"
+    },
+    {
+      "source": "UPC/cases/UPC_000047/evidence/turn_000003/option_006.jpg",
+      "asset": "assets/examples/upc/evidence-turn_000003-option_006.jpg.webp"
+    }
+  ],
+  "cases": [
+    {
+      "id": "KVEM_000018",
+      "turns": 2,
+      "duration_s": 40.874167
+    },
+    {
+      "id": "VIM_000022",
+      "turns": 2,
+      "duration_s": 45.0
+    },
+    {
+      "id": "ICM_000006",
+      "turns": 1,
+      "duration_s": 120.833
+    },
+    {
+      "id": "PACM_000001",
+      "turns": 1,
+      "duration_s": 150.0
+    },
+    {
+      "id": "AUQ_000014",
+      "turns": 2,
+      "duration_s": 85.16
+    },
+    {
+      "id": "WUQ_000026",
+      "turns": 1,
+      "duration_s": 78.411667
+    },
+    {
+      "id": "UPM_000020",
+      "turns": 3,
+      "duration_s": 249.16
+    },
+    {
+      "id": "UPC_000047",
+      "turns": 3,
+      "duration_s": 110.2
+    }
+  ]
+}

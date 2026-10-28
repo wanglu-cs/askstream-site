@@ -11,10 +11,10 @@
   <title>AskStream | When and What to Ask Proactively</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/fonts/dancing-script-bold.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="assets/style.css?v=20261027-6">
+  <link rel="stylesheet" href="assets/style.css?v=20261028-real-examples-1">
   <script src="assets/site.js?v=20261027-5" defer></script>
-  <script src="assets/examples-data.js?v=20261027-5" defer></script>
-  <script src="assets/examples.js?v=20261027-5" defer></script>
+  <script src="assets/examples-data.js?v=20261028-real-examples-1" defer></script>
+  <script src="assets/examples.js?v=20261028-real-examples-1" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#paper">Skip to paper</a>
@@ -348,13 +348,13 @@
       <div class="container example-container">
         <p class="section-eyebrow">WAIT · ASK · ANSWER</p>
         <h2 id="examples-title">AskStream Examples</h2>
-        <p class="section-intro">Eight tasks. Continuous video. Multiple turns of interaction.</p>
-        <p class="demo-disclaimer"><span class="demo-badge">Illustrative demo</span> Timings, choices, and multi-turn interactions are simulated. Videos will be added later.</p>
+        <p class="section-intro">Eight benchmark cases. Real video, annotated interactions, and reference evidence.</p>
+        <p class="demo-disclaimer"><span class="demo-badge">Benchmark examples</span> 15 annotated turns across eight tasks. Excerpts retain the original video timestamps. <a href="assets/examples/annotations.json" download>Download annotations</a>.</p>
         <div id="case-picker" class="case-picker" role="group" aria-label="Choose an example task"></div>
         <div class="example-workspace">
           <div class="example-workspace-header">
             <div><p id="case-category" class="case-category"></p><h3 id="case-title"></h3></div>
-            <span class="case-count">8 tasks <span aria-hidden="true">/</span> 3 turns each</span>
+            <span id="case-count" class="case-count"></span>
           </div>
           <div class="round-navigation">
             <span class="round-navigation-label">Interaction turns</span>
@@ -364,27 +364,31 @@
           <div class="example-columns">
             <div class="example-media-column">
               <div class="case-video-stage">
-                <video id="case-video" controls playsinline preload="metadata" hidden aria-label="Example video"></video>
-                <div id="case-video-placeholder" class="case-video-placeholder"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="9" y="15" width="46" height="34" rx="4"/><path d="m27 24 14 8-14 8Z"/></svg><strong>Video coming soon</strong><span id="case-scene"></span></div>
+                <video id="case-video" controls playsinline preload="metadata" aria-label="Example video"></video>
                 <span id="video-phase" class="video-phase">WAIT</span>
               </div>
+              <p id="case-source" class="case-source"></p>
+              <p id="video-error" class="video-error" role="alert" hidden>Unable to load this video. <a id="video-download" href="#">Open the video directly</a>.</p>
               <div class="timeline-panel">
                 <div class="timeline-heading"><span>Annotated timeline</span><span><time id="current-time">00:00</time><span class="time-divider"> / </span><time id="total-time">04:30</time></span></div>
                 <label class="sr-only" for="case-scrubber">Seek through example timeline</label>
-                <input id="case-scrubber" class="case-scrubber" type="range" min="0" max="270" step="1" value="0">
+                <input id="case-scrubber" class="case-scrubber" type="range" min="0" max="270" step="0.001" value="0">
                 <div id="timeline-windows" class="timeline-windows" aria-label="Annotated action windows"></div>
                 <div id="timeline-markers" class="timeline-markers" role="group" aria-label="Jump to an annotated timestamp"></div>
                 <div class="timeline-footer"><span>Click a window or timestamp to explore.</span><span class="timeline-legend"><span class="wait-dot">Wait</span><span class="ask-dot">Ask</span><span class="answer-dot">Answer</span></span></div>
+                <p id="timing-note" class="timing-note"></p>
               </div>
             </div>
             <div class="annotation-column">
               <div class="query-block"><div class="annotation-heading"><span class="annotation-eyebrow">USER QUERY</span><span id="query-turn-label"></span></div><p id="round-query"></p></div>
-              <div class="option-tabs" role="tablist" aria-label="Interaction option type"><button id="action-options-tab" type="button" role="tab" aria-controls="options-panel" aria-selected="true" data-option-type="action">Action options <span id="action-option-count"></span></button><button id="answer-options-tab" type="button" role="tab" aria-controls="options-panel" aria-selected="false" data-option-type="answer" tabindex="-1">Answer options <span id="answer-option-count"></span></button></div>
+              <div id="historical-preference" class="query-block" hidden><p class="annotation-eyebrow">EARLIER PREFERENCE</p><p id="preference-text"></p></div>
+              <div class="option-tabs" role="tablist" aria-label="Interaction option type"><button id="action-options-tab" type="button" role="tab" aria-controls="options-panel" aria-selected="true" data-option-type="action">Action options <span id="action-option-count"></span></button><button id="answer-options-tab" type="button" role="tab" aria-controls="options-panel" aria-selected="false" data-option-type="answer" tabindex="-1"><span id="answer-tab-label">Answer options</span> <span id="answer-option-count"></span></button></div>
               <div id="options-panel" class="options-panel" role="tabpanel" aria-labelledby="action-options-tab"><fieldset id="option-list"><legend class="sr-only">Choose an action option</legend></fieldset></div>
               <div class="reference-controls"><span>Explore the choices, then compare.</span><button id="toggle-reference" type="button" aria-expanded="false" aria-controls="reference-panel">Show reference</button></div>
-              <div id="reference-panel" class="reference-panel" hidden><p><span>ASK</span><strong id="reference-ask"></strong></p><p><span>USER REPLY</span><strong id="reference-reply"></strong></p><p><span>ANSWER</span><strong id="reference-answer"></strong></p></div>
+              <div id="reference-panel" class="reference-panel" hidden><p><span>ASK</span><strong id="reference-ask"></strong></p><p><span id="reference-reply-label">USER REPLY</span><strong id="reference-reply"></strong></p><p><span>ANSWER</span><strong id="reference-answer"></strong></p></div>
             </div>
           </div>
+          <div id="evidence-panel" class="evidence-panel" hidden><h3>Reference evidence</h3><p id="evidence-note"></p><div id="evidence-media" class="evidence-media"></div></div>
           <p id="example-status" class="example-status" role="status" aria-live="polite"></p>
         </div>
         <noscript><p>Enable JavaScript to explore the eight interactive examples.</p></noscript>
